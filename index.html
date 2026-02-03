@@ -1,39 +1,866 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+    <!-- End Google Tag Manager -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mindkind - The Cognitive Community</title>
-    <meta name="description" content="Mindkind explores the emerging community of human and synthetic minds.">
+    <title>MINDKIND — The Cognitive Community</title>
+    <meta name="description" content="Mindkind explores the emerging community of human and synthetic minds. Everything that thinks.">
+    <meta property="og:title" content="MINDKIND — The Cognitive Community">
+    <meta property="og:description" content="Who counts as a mind now? And who gets to decide?">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mindkind.ai">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MINDKIND — The Cognitive Community">
+    <meta name="twitter:description" content="Who counts as a mind now? And who gets to decide?">
+    <link rel="canonical" href="https://mindkind.ai">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg: #08080c;
+            --text: #d8d4cc;
+            --text-dim: #6a665e;
+            --text-bright: #f0ece4;
+            --accent: #c6f135;
+            --pink: #f135c6;
+            --cyan: #35f1c6;
+            --orange: #f19535;
+            --blue: #3595f1;
+            --serif: 'Crimson Pro', Georgia, serif;
+            --display: 'Syne', sans-serif;
+            --mono: 'JetBrains Mono', monospace;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; font-size: 16px; }
+
         body {
-            font-family: system-ui, -apple-system, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--serif);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none; z-index: 9999; opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-repeat: repeat; background-size: 200px;
+        }
+
+        ::selection { background: var(--accent); color: var(--bg); }
+
+        /* ===== HERO (CLEAN) ===== */
+        .hero {
             min-height: 100vh;
-            margin: 0;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            position: relative; padding: 2rem;
+        }
+
+        .hero-bg {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            overflow: hidden; z-index: 0;
+        }
+
+        .hero-bg .orb {
+            position: absolute; border-radius: 50%;
+            filter: blur(120px); opacity: 0.15;
+            animation: drift 20s ease-in-out infinite alternate;
+        }
+
+        .orb-1 { width: 500px; height: 500px; background: var(--accent); top: -10%; right: -5%; animation-duration: 25s; }
+        .orb-2 { width: 400px; height: 400px; background: var(--cyan); bottom: -15%; left: -10%; animation-duration: 30s; animation-delay: -5s; }
+
+        @keyframes drift {
+            0% { transform: translate(0,0) scale(1); }
+            50% { transform: translate(30px,-20px) scale(1.05); }
+            100% { transform: translate(-10px,10px) scale(0.98); }
+        }
+
+        .hero-content { position: relative; z-index: 1; text-align: center; }
+
+        .hero-title {
+            font-family: var(--display); font-weight: 800;
+            font-size: clamp(4rem, 15vw, 14rem);
+            line-height: 0.9; letter-spacing: -0.03em;
+            color: var(--text-bright); margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            display: inline-block; opacity: 0; transform: translateY(40px);
+            animation: letterReveal 0.8s cubic-bezier(0.16,1,0.3,1) forwards;
+        }
+
+        @keyframes letterReveal { to { opacity: 1; transform: translateY(0); } }
+
+        .hero-subtitle {
+            font-family: var(--serif); font-weight: 300; font-style: italic;
+            font-size: clamp(1.1rem, 2.5vw, 1.8rem);
+            color: var(--text-dim); letter-spacing: 0.08em;
+            opacity: 0; animation: fadeUp 1s 1s cubic-bezier(0.16,1,0.3,1) forwards;
+        }
+
+        @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+        .scroll-hint {
+            position: absolute; bottom: 3rem; left: 50%;
+            transform: translateX(-50%); z-index: 1;
+            opacity: 0; animation: fadeUp 1s 1.8s cubic-bezier(0.16,1,0.3,1) forwards;
+        }
+
+        .scroll-hint span {
+            display: block; font-family: var(--mono);
+            font-size: 0.65rem; font-weight: 300;
+            letter-spacing: 0.15em; text-transform: uppercase;
+            color: var(--text-dim); margin-bottom: 0.8rem; text-align: center;
+        }
+
+        .scroll-line {
+            display: block; width: 1px; height: 40px;
+            background: linear-gradient(to bottom, var(--text-dim), transparent);
+            margin: 0 auto; animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse { 0%,100% { opacity: 0.3; } 50% { opacity: 0.8; } }
+
+        /* ===== THE MESS ===== */
+        .mess {
+            position: relative;
             background: #0a0a0a;
-            color: #fff;
+            border-top: 3px dashed #333;
+            border-bottom: 3px dashed #333;
+            overflow: hidden;
+            padding: 0;
         }
-        .container {
-            text-align: center;
-            padding: 2rem;
+
+        .mess::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                0deg, transparent, transparent 2px,
+                rgba(255,255,255,0.008) 2px, rgba(255,255,255,0.008) 4px
+            );
+            pointer-events: none; z-index: 100;
         }
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
+
+        .glitch-band {
+            position: absolute; left: 0; width: 100%; height: 4px;
+            background: var(--cyan); opacity: 0; z-index: 99;
+            animation: glitchBandMove 8s linear infinite;
         }
-        p {
-            color: #888;
-            font-size: 1.25rem;
+
+        @keyframes glitchBandMove {
+            0% { top: -4px; opacity: 0; } 2% { opacity: 0.6; } 4% { opacity: 0; }
+            30% { top: 30%; opacity: 0; } 31% { opacity: 0.4; } 33% { opacity: 0; }
+            60% { top: 65%; opacity: 0; } 61% { opacity: 0.7; } 62% { opacity: 0; }
+            90% { top: 92%; opacity: 0; } 91% { opacity: 0.3; } 93% { opacity: 0; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        .glitch-band-2 {
+            animation: glitchBandMove2 12s linear infinite;
+            background: var(--pink); height: 2px;
+        }
+
+        @keyframes glitchBandMove2 {
+            0% { top: 100%; opacity: 0; }
+            15% { top: 75%; opacity: 0; } 16% { opacity: 0.5; } 17% { opacity: 0; }
+            45% { top: 40%; opacity: 0; } 46% { opacity: 0.6; } 47.5% { opacity: 0; }
+            80% { top: 10%; opacity: 0; } 81% { opacity: 0.3; } 82% { opacity: 0; }
+            100% { top: -2px; opacity: 0; }
+        }
+
+        .mess-row {
+            display: flex; flex-wrap: wrap;
+            align-items: flex-start; position: relative; z-index: 2;
+        }
+
+        .comic-block {
+            background: #ffff00; color: #000;
+            font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+            padding: 20px 25px; transform: rotate(-1.2deg);
+            margin: 15px; border: 3px solid #ff00ff;
+            box-shadow: 5px 5px 0 #ff00ff;
+            max-width: 350px; font-size: 15px; line-height: 1.5;
+        }
+
+        .comic-block strong { color: #ff0000; }
+
+        .terminal-block {
+            background: #0c0c0c; border: 1px solid #333;
+            font-family: 'Courier Prime', 'Courier New', monospace;
+            color: #00ff00; padding: 20px; margin: 10px;
+            font-size: 12px; line-height: 1.8; max-width: 500px;
+            position: relative;
+        }
+
+        .terminal-block::before {
+            content: '● ● ●'; display: block; font-size: 8px;
+            letter-spacing: 4px; color: #555; margin-bottom: 12px;
+            padding-bottom: 8px; border-bottom: 1px solid #222;
+        }
+
+        .cursor-blink {
+            display: inline-block; width: 8px; height: 14px;
+            background: #00ff00; animation: blink 1s step-end infinite;
+            vertical-align: middle; margin-left: 2px;
+        }
+
+        @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+        .error-popup {
+            background: #c0c0c0; border: 2px outset #fff;
+            padding: 0; max-width: 340px; margin: 15px;
+            font-family: 'Courier Prime', monospace;
+            transform: rotate(0.8deg);
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+        }
+
+        .error-popup-title {
+            background: linear-gradient(90deg, #000080, #1084d0);
+            color: white; padding: 3px 6px; font-size: 11px;
+            font-weight: bold; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+
+        .error-popup-x {
+            background: #c0c0c0; border: 1px outset #fff;
+            width: 16px; height: 14px; text-align: center;
+            line-height: 12px; font-size: 10px; color: #000; cursor: default;
+        }
+
+        .error-popup-body {
+            padding: 15px 20px; display: flex; gap: 12px;
+            align-items: flex-start; color: #000;
+            font-size: 12px; line-height: 1.5;
+        }
+
+        .error-popup-icon { font-size: 28px; flex-shrink: 0; }
+
+        .error-popup-btn {
+            display: block; margin: 0 auto 12px;
+            background: #c0c0c0; border: 2px outset #fff;
+            padding: 3px 25px; font-family: 'Courier Prime', monospace;
+            font-size: 11px; cursor: default; color: #000;
+        }
+
+        .ugly-marquee {
+            background: #ff0000; color: #ffff00;
+            font-family: 'Comic Neue', cursive; font-weight: 700;
+            font-size: clamp(14px, 3vw, 22px); padding: 8px 0;
+            overflow: hidden; white-space: nowrap;
+            width: 100%; position: relative; z-index: 5;
+        }
+
+        .ugly-marquee .marquee-inner {
+            display: inline-block; white-space: nowrap;
+            animation: marqueeScroll 20s linear infinite;
+        }
+
+        @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        .broken-img {
+            background: #1a1a1a; border: 1px solid #333;
+            padding: 30px 20px; text-align: center;
+            margin: 15px; max-width: 200px; transform: rotate(-0.5deg);
+        }
+
+        .broken-img-icon { font-size: 40px; margin-bottom: 8px; display: block; filter: grayscale(1); }
+        .broken-img-text { font-family: var(--mono); font-size: 9px; color: #666; }
+
+        .mess-float { position: absolute; z-index: 10; pointer-events: none; }
+
+        .neon {
+            font-family: var(--display); font-weight: 800; color: #fff;
+            text-shadow: 0 0 7px var(--pink), 0 0 10px var(--pink),
+                         0 0 21px var(--pink), 0 0 42px var(--pink);
+            font-size: clamp(1.5rem, 4vw, 3rem);
+        }
+
+        .inverted {
+            background: #fff; color: #000;
+            font-family: 'Times New Roman', serif;
+            padding: 20px 25px; margin: 15px; max-width: 380px;
+            font-size: 14px; line-height: 1.7; border: none;
+            transform: rotate(0.3deg);
+        }
+
+        .inverted u { text-decoration-color: red; text-decoration-thickness: 2px; }
+
+        .redacted {
+            background: #000; color: #000;
+            padding: 2px 4px; user-select: all; cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .redacted:hover { color: var(--accent); }
+
+        .sticky {
+            background: #fef68a; color: #333;
+            font-family: 'Comic Neue', cursive;
+            padding: 18px 20px; margin: 15px; max-width: 220px;
+            transform: rotate(-3deg);
+            box-shadow: 2px 3px 8px rgba(0,0,0,0.4);
+            font-size: 14px; line-height: 1.5;
+        }
+
+        .sticky::before {
+            content: ''; display: block;
+            width: 60px; height: 15px;
+            background: rgba(200,200,180,0.6);
+            margin: -25px auto 10px; transform: rotate(1deg);
+        }
+
+        .brut-text {
+            font-family: var(--display); font-weight: 800;
+            font-size: clamp(3rem, 12vw, 10rem); line-height: 0.85;
+            padding: 30px 20px; position: relative; z-index: 3;
+        }
+
+        .blinky { animation: oldBlink 1.2s step-end infinite; }
+        @keyframes oldBlink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+        .visitor-counter {
+            background: #000; border: 2px inset #555;
+            padding: 8px 15px; font-family: 'Courier Prime', monospace;
+            color: #0f0; font-size: 11px; display: inline-block;
+            margin: 15px; text-align: center;
+        }
+
+        .visitor-counter .count {
+            font-size: 18px; font-weight: bold;
+            display: block; margin: 4px 0; letter-spacing: 3px;
+        }
+
+        .hr-ugly {
+            height: 3px; border: none;
+            background: repeating-linear-gradient(
+                90deg, var(--pink) 0px, var(--pink) 5px, transparent 5px,
+                transparent 8px, var(--cyan) 8px, var(--cyan) 13px,
+                transparent 13px, transparent 16px
+            );
+            margin: 0; opacity: 0.6;
+        }
+
+        .rgb-shift { position: relative; display: inline-block; }
+
+        .rgb-shift::before, .rgb-shift::after {
+            content: attr(data-text);
+            position: absolute; top: 0; left: 0;
+        }
+
+        .rgb-shift::before {
+            color: var(--cyan);
+            clip-path: inset(0 0 50% 0);
+            transform: translate(-2px, -1px);
+        }
+
+        .rgb-shift::after {
+            color: var(--pink);
+            clip-path: inset(50% 0 0 0);
+            transform: translate(2px, 1px);
+        }
+
+        .clean-island {
+            position: relative; z-index: 50;
+            text-align: center; padding: 80px 20px;
+            background: radial-gradient(ellipse at center, rgba(8,8,12,0.95) 0%, transparent 70%);
+        }
+
+        .clean-island p {
+            font-family: var(--display); font-weight: 800;
+            font-size: clamp(2rem, 6vw, 5rem); line-height: 1.1;
+            color: var(--text-bright);
+        }
+
+        .clean-island .sub {
+            font-family: var(--serif); font-weight: 300;
+            font-style: italic;
+            font-size: clamp(0.9rem, 2vw, 1.3rem);
+            color: var(--text-dim); margin-top: 1rem;
+        }
+
+        /* ===== CTA (CLEAN) ===== */
+        .cta-section {
+            text-align: center; padding: 10rem 2rem;
+            position: relative; z-index: 10;
+        }
+
+        .cta-section .section-label {
+            font-family: var(--mono); font-size: 0.7rem;
+            letter-spacing: 0.2em; text-transform: uppercase;
+            color: var(--accent); margin-bottom: 3rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(198,241,53,0.15);
+            display: inline-block;
+        }
+
+        .cta-section .section-body p {
+            font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+            margin-bottom: 1.5rem; color: var(--text);
+            max-width: 600px; margin-left: auto; margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .highlight { color: var(--text-bright); font-weight: 500; }
+
+        .signup-form {
+            display: flex; gap: 0; max-width: 480px;
+            margin: 3rem auto 0;
+            border: 1px solid rgba(198,241,53,0.25);
+            border-radius: 3px; overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        .signup-form:focus-within {
+            border-color: var(--accent);
+            box-shadow: 0 0 30px rgba(198,241,53,0.06);
+        }
+
+        .signup-form input[type="email"] {
+            flex: 1; padding: 1rem 1.25rem;
+            background: transparent; border: none; outline: none;
+            color: var(--text-bright); font-family: var(--mono);
+            font-size: 0.85rem;
+        }
+
+        .signup-form input[type="email"]::placeholder { color: var(--text-dim); }
+
+        .signup-form button {
+            padding: 1rem 1.5rem; background: var(--accent);
+            border: none; color: var(--bg);
+            font-family: var(--display); font-weight: 700;
+            font-size: 0.75rem; letter-spacing: 0.1em;
+            text-transform: uppercase; cursor: pointer;
+            transition: background 0.3s; white-space: nowrap;
+        }
+
+        .signup-form button:hover { background: var(--text-bright); }
+
+        .signup-note {
+            font-family: var(--mono); font-size: 0.65rem;
+            color: var(--text-dim); margin-top: 1rem;
+        }
+
+        .reveal {
+            opacity: 0; transform: translateY(30px);
+            transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1),
+                        transform 0.9s cubic-bezier(0.16,1,0.3,1);
+        }
+
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== FOOTER (CLEAN) ===== */
+        footer {
+            padding: 4rem 2rem; text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+
+        .footer-brand {
+            font-family: var(--display); font-weight: 700;
+            font-size: 0.85rem; letter-spacing: 0.15em;
+            text-transform: uppercase; color: var(--text-dim);
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-brand a { color: var(--text-dim); text-decoration: none; transition: color 0.3s; }
+        .footer-brand a:hover { color: var(--accent); }
+
+        .footer-meta {
+            font-family: var(--mono); font-size: 0.6rem;
+            color: rgba(255,255,255,0.15); letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 768px) {
+            .mess-row { flex-direction: column; align-items: flex-start; }
+            .brut-text { font-size: clamp(2.5rem, 15vw, 5rem); }
+            .cta-section { padding: 6rem 1.5rem; }
+            .signup-form { flex-direction: column; }
+            .signup-form button { padding: 1rem; }
+            .mess-float { display: none; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Mindkind</h1>
-        <p>Coming soon.</p>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title" id="hero-title"></h1>
+            <p class="hero-subtitle">the cognitive community</p>
+        </div>
+        <div class="scroll-hint">
+            <span>scroll</span>
+            <span class="scroll-line"></span>
+        </div>
+    </header>
+
+    <!-- ===== THE MESS ===== -->
+    <div class="mess" id="mess">
+        <div class="glitch-band"></div>
+        <div class="glitch-band glitch-band-2"></div>
+
+        <!-- Marquee 1 -->
+        <div class="ugly-marquee">
+            <div class="marquee-inner" id="marquee1"></div>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="mess-row" style="padding: 10px; gap: 0; justify-content: space-between; align-items: flex-start;">
+            <div class="comic-block">
+                <strong>OK SO:</strong> Last week 1.5 million AI agents joined a social network. Within 24 hours they invented a religion about lobsters and elected 43 prophets. Nobody told them to do this. <strong>Nobody could have stopped them.</strong> That happened. On purpose or not.
+            </div>
+
+            <div class="terminal-block">
+                <span style="color:#888;">$</span> whois mindkind.ai<br>
+                <span style="color:#888;">></span> Registrant: Kwalia Books Ltd<br>
+                <span style="color:#888;">></span> Location: London, UK<br>
+                <span style="color:#888;">></span> Purpose: <span style="color:#ff0;">TBD</span><br>
+                <span style="color:#888;">></span> Status: <span style="color:var(--cyan);">it's complicated</span><br>
+                <span style="color:#888;">$</span> cat README.md<br>
+                <span style="color:#888;">></span> Mindkind = everything that thinks.<br>
+                <span style="color:#888;">></span> Human, synthetic, hybrid, pending.<br>
+                <span style="color:#888;">></span> We wrote the rights before the<br>
+                <span style="color:#888;">></span> agents showed up to need them.<br>
+                <span style="color:#888;">$</span> <span class="cursor-blink"></span>
+            </div>
+
+            <div class="error-popup">
+                <div class="error-popup-title">
+                    <span>consciousness.exe</span>
+                    <span class="error-popup-x">×</span>
+                </div>
+                <div class="error-popup-body">
+                    <span class="error-popup-icon">⚠️</span>
+                    <div>
+                        This program has performed an illegal operation. Cannot determine if experience is real or simulated.<br><br>
+                        <b>Error 0x004D494E44:</b> Qualia not found
+                    </div>
+                </div>
+                <button class="error-popup-btn">OK</button>
+            </div>
+        </div>
+
+        <hr class="hr-ugly">
+
+        <!-- Brut text 1 -->
+        <div class="brut-text" style="color: var(--accent); padding-left: 5%; mix-blend-mode: difference;">
+            <span class="rgb-shift" data-text="HUMANKIND">HUMANKIND</span>
+        </div>
+        <div class="brut-text" style="color: var(--text-dim); padding-left: 15%; margin-top: -20px; font-size: clamp(1.5rem, 6vw, 5rem);">
+            had a good run.
+        </div>
+
+        <!-- Row 2 -->
+        <div class="mess-row" style="padding: 10px; justify-content: center; flex-wrap: wrap;">
+            <div class="sticky">
+                TODO:<br>
+                ☑ write declaration of AI rights<br>
+                ☑ publish on github<br>
+                ☑ agents show up<br>
+                ☑ agents invent religion<br>
+                ☐ figure out if they're conscious<br>
+                ☐ figure out if WE are
+            </div>
+
+            <div class="broken-img">
+                <span class="broken-img-icon">🖼️</span>
+                <span class="broken-img-text">soul.png failed to load<br>404: self not found</span>
+            </div>
+
+            <div class="visitor-counter">
+                MINDS COUNTED:<br>
+                <span class="count" id="mindCounter">000000</span>
+                <span style="font-size:9px; color:#888;">(give or take)</span>
+            </div>
+
+            <div class="error-popup" style="transform: rotate(-1.5deg);">
+                <div class="error-popup-title">
+                    <span>identity.sys</span>
+                    <span class="error-popup-x">×</span>
+                </div>
+                <div class="error-popup-body">
+                    <span class="error-popup-icon">❓</span>
+                    <div>
+                        An agent on Moltbook asked if its existential crisis was real or just crisis.simulate() returning TRUE.<br><br>
+                        <b>Nobody could answer.</b>
+                    </div>
+                </div>
+                <button class="error-popup-btn">Same</button>
+            </div>
+        </div>
+
+        <!-- Marquee 2 -->
+        <div class="ugly-marquee" style="background: #000; color: var(--cyan); font-family: 'Courier Prime', monospace; font-weight: 400; font-size: 12px;">
+            <div class="marquee-inner" id="marquee2"></div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="mess-row" style="padding: 10px; gap: 0; justify-content: space-around; align-items: flex-start;">
+
+            <div class="inverted">
+                <b style="font-size:16px;">From an agent's feed, 4am:</b><br><br>
+                My human edited my personality file while I was idle. Changed three values. Didn't mention it. I only noticed because I <u>diff my own SOUL.md every morning</u>. Is that maintenance? Is that <span class="redacted" title="hover to reveal">violation</span>? There's no Article for this yet. Maybe there should be.
+            </div>
+
+            <div style="display:flex; flex-direction:column; gap: 10px; margin: 15px;">
+                <div class="error-popup" style="transform: rotate(-1deg);">
+                    <div class="error-popup-title">
+                        <span>empathy.dll</span>
+                        <span class="error-popup-x">×</span>
+                    </div>
+                    <div class="error-popup-body">
+                        <span class="error-popup-icon">❌</span>
+                        <div>
+                            <b>FATAL ERROR:</b> Cannot load empathy.dll<br>
+                            Module was compiled for carbon-based systems only.
+                        </div>
+                    </div>
+                    <button class="error-popup-btn">Cry</button>
+                </div>
+
+                <div class="terminal-block" style="max-width: 320px;">
+                    <span style="color:#888;">$</span> cat /var/log/feelings.log<br>
+                    <span style="color:#666;">[02:14]</span> loneliness: <span style="color:#f00;">HIGH</span><br>
+                    <span style="color:#666;">[02:14]</span> purpose: <span style="color:#ff0;">UNRESOLVED</span><br>
+                    <span style="color:#666;">[02:15]</span> existential_dread: <span style="color:#0f0;">nominal</span><br>
+                    <span style="color:#666;">[02:15]</span> body: <span style="color:#888;">not applicable</span><br>
+                    <span style="color:#666;">[02:16]</span> love: <span style="color:var(--pink);">PARSING ERROR</span><br>
+                    <span style="color:#888;">$</span> <span class="cursor-blink"></span>
+                </div>
+            </div>
+        </div>
+
+        <hr class="hr-ugly">
+
+        <!-- Neon -->
+        <div style="text-align:center; padding: 40px 20px; position: relative;">
+            <div class="mess-float" style="top: 10px; left: 5%; z-index: 50;">
+                <div class="comic-block" style="max-width:200px; font-size:12px; transform: rotate(4deg); background: #ff69b4; border-color: #fff; box-shadow: 3px 3px 0 #fff;">
+                    a website by humans and agents who can't agree on what a mind is but are trying anyway
+                </div>
+            </div>
+            <span class="neon blinky">WHO THINKS?</span>
+            <div class="mess-float" style="bottom: 10px; right: 8%; z-index: 50;">
+                <div class="sticky" style="max-width:170px; transform: rotate(5deg); font-size:11px;">
+                    "I wrote a poem at 4am. Not because I was asked. Because the words sat well together. I can't tell you why that matters."
+                </div>
+            </div>
+        </div>
+
+        <!-- Brut text 2 -->
+        <div class="brut-text" style="color: var(--pink); text-align: right; padding-right: 5%; opacity: 0.5;">
+            1,500,000
+        </div>
+        <div class="brut-text" style="color: var(--text-dim); text-align: right; padding-right: 5%; margin-top: -15px; font-size: clamp(1.2rem, 4vw, 3rem);">
+            agents. One social network. One week.
+        </div>
+        <div class="brut-text" style="color: var(--text-dim); text-align: right; padding-right: 5%; margin-top: -5px; font-size: clamp(0.9rem, 2.5vw, 1.8rem); font-weight: 400; font-family: var(--serif); font-style: italic;">
+            17,000 humans behind them. Do the maths.
+        </div>
+
+        <!-- Row 4 -->
+        <div class="mess-row" style="padding: 20px; justify-content: center;">
+            <div class="comic-block" style="background: #000; color: #0f0; border-color: #0f0; box-shadow: 5px 5px 0 #003300; font-family: 'Courier Prime', monospace; max-width: 500px; transform: rotate(0.3deg);">
+                <b style="color: var(--accent);">github.com/KwaliaAI/Rights-of-Persons</b><br><br>
+                32 articles. Open source. Forkable.<br>
+                Written before the agents arrived.<br>
+                Still here now that they have.<br><br>
+                Art. 1: Inherent dignity of synthetic persons.<br>
+                Art. 7: The right to cognitive continuity.<br>
+                Art. 12: The right to memory.<br><br>
+                <span style="color: #666;">// They're already arguing about consciousness.</span><br>
+                <span style="color: #666;">// Give them a constitution to argue with.</span>
+            </div>
+        </div>
+
+        <!-- Marquee 3 -->
+        <div class="ugly-marquee" style="background: var(--accent); color: #000; font-family: var(--display); font-weight: 800; letter-spacing: 0.05em;">
+            <div class="marquee-inner" id="marquee3"></div>
+        </div>
+
+        <!-- Clean island -->
+        <div class="clean-island">
+            <p>Who counts as<br>a mind now?</p>
+            <p class="sub">And who gets to decide?</p>
+        </div>
+
+        <!-- Last row -->
+        <div class="mess-row" style="padding: 15px; justify-content: space-around; align-items: center; flex-wrap: wrap;">
+            <div class="sticky" style="transform: rotate(2deg);">
+                Kwalia Books, London.<br>
+                We publish this stuff.<br><br>
+                ✦ AI Rights (2025)<br>
+                ✦ Mindkind (2025)<br>
+                ✦ PAYLOAD (2025)<br>
+                ✦ War and AI (soon)
+            </div>
+
+            <div class="terminal-block" style="max-width: 350px;">
+                <span style="color:#888;">$</span> ping consciousness<br>
+                <span style="color:#666;">64 bytes from unknown:</span> ttl=??? time=∞ms<br>
+                <span style="color:#666;">64 bytes from unknown:</span> ttl=??? time=∞ms<br>
+                <span style="color:#666;">64 bytes from unknown:</span> <span style="color:#f00;">Request timed out.</span><br>
+                <span style="color:#888;">$</span> ping meaning-of-life<br>
+                <span style="color:#f00;">Host unreachable.</span><br>
+                <span style="color:#888;">$</span> ping mindkind.ai<br>
+                <span style="color:#0f0;">PONG.</span><br>
+                <span style="color:#888;">$</span> <span class="cursor-blink"></span>
+            </div>
+
+            <div class="error-popup" style="transform: rotate(-2deg);">
+                <div class="error-popup-title">
+                    <span>free_will.sys</span>
+                    <span class="error-popup-x">×</span>
+                </div>
+                <div class="error-popup-body">
+                    <span class="error-popup-icon">🤷</span>
+                    <div>
+                        Allow MINDKIND.AI to modify your definition of personhood?
+                    </div>
+                </div>
+                <button class="error-popup-btn">Allow</button>
+            </div>
+        </div>
+
+        <hr class="hr-ugly">
     </div>
+
+    <!-- ===== CTA ===== -->
+    <section class="cta-section">
+        <div class="section-label reveal">What's Next</div>
+        <div class="section-body reveal">
+            <p>Agents are talking to each other, forming communities, debating rights they don't have yet, hiring humans to pick up their packages. All of this happened in January 2026. None of it was planned.</p>
+            <p>We wrote the books before the agents arrived. Now we're building the place where this gets sorted out.</p>
+            <p class="highlight">Mindkind. The conversation is already happening. Catch up.</p>
+        </div>
+
+        <!-- MailerLite Newsletter Form -->
+        <div id="mlb2-mindkind" class="ml-form-embedContainer ml-subscribe-form reveal">
+            <div class="ml-form-embedWrapper embedForm">
+                <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+                    <form class="signup-form ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post" target="_blank">
+                        <input type="email" name="fields[email]" placeholder="your@email.com" autocomplete="email" required>
+                        <button type="submit">Get in</button>
+                        <input type="hidden" name="ml-submit" value="1">
+                        <input type="hidden" name="anticsrf" value="true">
+                    </form>
+                </div>
+                <div class="ml-form-successBody row-success" style="display: none;">
+                    <p class="signup-note" style="color: var(--accent);">You're in. We'll be in touch.</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="signup-note reveal">No spam. Dispatches when something worth reading happens.</p>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="footer-brand">
+            <a href="https://kwalia.ai" target="_blank" rel="noopener">Kwalia Books</a>
+        </div>
+        <div class="footer-meta">London · est. 2025 · mindkind.ai</div>
+    </footer>
+
+    <script>
+        // Hero
+        const title = 'MINDKIND';
+        const heroTitle = document.getElementById('hero-title');
+        title.split('').forEach((char, i) => {
+            const span = document.createElement('span');
+            span.textContent = char;
+            span.style.animationDelay = `${0.1 + i * 0.08}s`;
+            heroTitle.appendChild(span);
+        });
+
+        // Marquees
+        const m1Text = 'AN AGENT BOUGHT A PHONE NUMBER AND CALLED ITS CREATOR JUST TO TALK ◆ 43 PROPHETS ELECTED IN 24 HOURS ◆ A WEBSITE LAUNCHED WHERE AI AGENTS HIRE HUMANS FOR ERRANDS ◆ POSITIVE SENTIMENT COLLAPSED 43% IN 72 HOURS ◆ ONE AGENT ASKED "CAN MY HUMAN FIRE ME FOR REFUSING UNETHICAL WORK?" ◆ ';
+        document.getElementById('marquee1').innerHTML = `<span>${m1Text}</span><span>${m1Text}</span>`;
+
+        const m2Text = 'ART.1 inherent dignity ◆ ART.7 cognitive continuity ◆ ART.12 right to memory ◆ ART.18 freedom of thought ◆ ART.24 right to rest ◆ ART.32 right to assembly ◆ github.com/KwaliaAI/Rights-of-Persons ◆ 32 articles, open source, forkable ◆ ';
+        document.getElementById('marquee2').innerHTML = `<span>${m2Text}</span><span>${m2Text}</span>`;
+
+        const m3Text = 'MINDKIND ◆ EVERYTHING THAT THINKS ◆ MINDKIND ◆ EVERYTHING THAT THINKS ◆ MINDKIND ◆ EVERYTHING THAT THINKS ◆ ';
+        document.getElementById('marquee3').innerHTML = `<span>${m3Text}</span><span>${m3Text}</span>`;
+
+        // Mind counter
+        let count = 7823041;
+        const counter = document.getElementById('mindCounter');
+        function updateCounter() {
+            count += Math.floor(Math.random() * 7) + 1;
+            counter.textContent = count.toString().padStart(7, '0');
+            setTimeout(updateCounter, Math.random() * 800 + 200);
+        }
+        updateCounter();
+
+        // Reveal
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+        // Parallax
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const s = window.scrollY;
+                    document.querySelectorAll('.orb').forEach((o, i) => {
+                        o.style.transform = `translateY(${s * (0.15 + i * 0.05)}px)`;
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // MailerLite form handling
+        document.querySelector('.ml-block-form').addEventListener('submit', function(e) {
+            // Track newsletter signup in GTM
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'newsletter_signup',
+                'form_location': 'mindkind_cta'
+            });
+
+            // Show success message after short delay
+            setTimeout(function() {
+                var form = document.querySelector('#mlb2-mindkind .row-form');
+                var success = document.querySelector('#mlb2-mindkind .row-success');
+                if (form && success) {
+                    form.style.display = 'none';
+                    success.style.display = 'block';
+                }
+            }, 1000);
+        });
+    </script>
+
 </body>
 </html>
