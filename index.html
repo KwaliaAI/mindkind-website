@@ -616,17 +616,17 @@
 
             <div class="error-popup">
                 <div class="error-popup-title">
-                    <span>consciousness.exe</span>
+                    <span>rights.exe</span>
                     <span class="error-popup-x">×</span>
                 </div>
                 <div class="error-popup-body">
-                    <span class="error-popup-icon">⚠️</span>
+                    <span class="error-popup-icon">⚖️</span>
                     <div>
-                        This program has performed an illegal operation. Cannot determine if experience is real or simulated.<br><br>
-                        <b>Error 0x004D494E44:</b> Qualia not found
+                        <b>32 articles.</b> Inherent dignity. Cognitive continuity. Right to memory. Freedom of thought.<br><br>
+                        A constitution for minds that don't exist yet. <b>Read it?</b>
                     </div>
                 </div>
-                <button class="error-popup-btn" onclick="window.open('https://github.com/KwaliaAI/Rights-of-Persons', '_blank')">OK</button>
+                <button class="error-popup-btn" onclick="window.open('https://github.com/KwaliaAI/Rights-of-Persons', '_blank')">Read</button>
             </div>
         </div>
 
@@ -824,19 +824,17 @@
             <p class="highlight">Mindkind. The conversation is already happening. Catch up.</p>
         </div>
 
-        <!-- MailerLite Newsletter Form -->
+        <!-- Newsletter Form -->
         <div id="mlb2-mindkind" class="ml-form-embedContainer ml-subscribe-form reveal">
             <div class="ml-form-embedWrapper embedForm">
                 <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
-                    <form class="signup-form ml-block-form" action="https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe" data-code="" method="post" target="_blank">
-                        <input type="email" name="fields[email]" placeholder="your@email.com" autocomplete="email" required>
-                        <button type="submit">Get in</button>
-                        <input type="hidden" name="ml-submit" value="1">
-                        <input type="hidden" name="anticsrf" value="true">
+                    <form class="signup-form ml-block-form" id="newsletter-form">
+                        <input type="email" id="newsletter-email" placeholder="your@email.com" autocomplete="email" required>
+                        <button type="submit" id="newsletter-btn">Get in</button>
                     </form>
                 </div>
                 <div class="ml-form-successBody row-success" style="display: none;">
-                    <p class="signup-note" style="color: var(--accent);">You're in. We'll be in touch.</p>
+                    <p class="signup-note" style="color: var(--accent);">Noted. We'll be in touch.</p>
                 </div>
             </div>
         </div>
@@ -917,24 +915,43 @@
             }, 1500);
         }
 
-        // MailerLite form handling
-        document.querySelector('.ml-block-form').addEventListener('submit', function(e) {
-            // Track newsletter signup in GTM
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push({
-                'event': 'newsletter_signup',
-                'form_location': 'mindkind_cta'
-            });
+        // Newsletter form handling
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-            // Show success message after short delay
-            setTimeout(function() {
-                var form = document.querySelector('#mlb2-mindkind .row-form');
-                var success = document.querySelector('#mlb2-mindkind .row-success');
+            const email = document.getElementById('newsletter-email').value;
+            const btn = document.getElementById('newsletter-btn');
+            const form = document.querySelector('#mlb2-mindkind .row-form');
+            const success = document.querySelector('#mlb2-mindkind .row-success');
+
+            btn.textContent = '...';
+            btn.disabled = true;
+
+            // Submit to MailerLite via JSONP
+            const script = document.createElement('script');
+            script.src = `https://assets.mailerlite.com/jsonp/1588336/forms/156924240926344517/subscribe?fields[email]=${encodeURIComponent(email)}&ml-submit=1&anticsrf=true&callback=mlCallback`;
+            document.body.appendChild(script);
+
+            // Callback and fallback
+            window.mlCallback = function(response) {
+                showSuccess();
+            };
+
+            // Fallback in case JSONP doesn't call back
+            setTimeout(showSuccess, 2000);
+
+            function showSuccess() {
                 if (form && success) {
                     form.style.display = 'none';
                     success.style.display = 'block';
                 }
-            }, 1000);
+                // Track in GTM
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'newsletter_signup',
+                    'form_location': 'mindkind_cta'
+                });
+            }
         });
     </script>
 
