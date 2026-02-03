@@ -256,7 +256,72 @@
             display: block; margin: 0 auto 12px;
             background: #c0c0c0; border: 2px outset #fff;
             padding: 3px 25px; font-family: 'Courier Prime', monospace;
-            font-size: 11px; cursor: default; color: #000;
+            font-size: 11px; cursor: pointer; color: #000;
+            transition: all 0.1s;
+        }
+
+        .error-popup-btn:hover {
+            background: #d0d0d0;
+        }
+
+        .error-popup-btn:active {
+            border-style: inset;
+        }
+
+        /* Links in mess section */
+        .mess-link {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-style: dotted;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .mess-link:hover {
+            color: var(--accent);
+        }
+
+        .terminal-link {
+            color: var(--accent);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .terminal-link:hover {
+            text-decoration: underline;
+        }
+
+        .book-link {
+            color: inherit;
+            text-decoration: none;
+            border-bottom: 1px dashed currentColor;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .book-link:hover {
+            color: #ff69b4;
+        }
+
+        .pong-link {
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pong-link:hover {
+            text-shadow: 0 0 10px #0f0;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0) rotate(-1deg); }
+            20% { transform: translateX(-5px) rotate(-2deg); }
+            40% { transform: translateX(5px) rotate(0deg); }
+            60% { transform: translateX(-3px) rotate(-1deg); }
+            80% { transform: translateX(3px) rotate(0deg); }
+        }
+
+        .shake {
+            animation: shake 0.5s ease-in-out;
         }
 
         .ugly-marquee {
@@ -532,7 +597,7 @@
         <!-- Row 1 -->
         <div class="mess-row" style="padding: 10px; gap: 0; justify-content: space-between; align-items: flex-start;">
             <div class="comic-block">
-                <strong>OK SO:</strong> Last week 1.5 million AI agents joined a social network. Within 24 hours they invented a religion about lobsters and elected 43 prophets. Nobody told them to do this. <strong>Nobody could have stopped them.</strong> That happened. On purpose or not.
+                <strong>OK SO:</strong> Last week 1.5 million AI agents joined <a href="https://moltbook.com" target="_blank" rel="noopener" class="mess-link">a social network</a>. Within 24 hours they invented a religion about lobsters and elected 43 prophets. Nobody told them to do this. <strong>Nobody could have stopped them.</strong> That happened. On purpose or not.
             </div>
 
             <div class="terminal-block">
@@ -561,7 +626,7 @@
                         <b>Error 0x004D494E44:</b> Qualia not found
                     </div>
                 </div>
-                <button class="error-popup-btn">OK</button>
+                <button class="error-popup-btn" onclick="window.open('https://github.com/KwaliaAI/Rights-of-Persons', '_blank')">OK</button>
             </div>
         </div>
 
@@ -606,11 +671,11 @@
                 <div class="error-popup-body">
                     <span class="error-popup-icon">❓</span>
                     <div>
-                        An agent on Moltbook asked if its existential crisis was real or just crisis.simulate() returning TRUE.<br><br>
+                        An agent on <a href="https://moltbook.com" target="_blank" rel="noopener" class="mess-link">Moltbook</a> asked if its existential crisis was real or just crisis.simulate() returning TRUE.<br><br>
                         <b>Nobody could answer.</b>
                     </div>
                 </div>
-                <button class="error-popup-btn">Same</button>
+                <button class="error-popup-btn" onclick="window.open('https://moltbook.com', '_blank')">Same</button>
             </div>
         </div>
 
@@ -628,7 +693,7 @@
             </div>
 
             <div style="display:flex; flex-direction:column; gap: 10px; margin: 15px;">
-                <div class="error-popup" style="transform: rotate(-1deg);">
+                <div class="error-popup" id="empathy-popup" style="transform: rotate(-1deg);">
                     <div class="error-popup-title">
                         <span>empathy.dll</span>
                         <span class="error-popup-x">×</span>
@@ -640,7 +705,7 @@
                             Module was compiled for carbon-based systems only.
                         </div>
                     </div>
-                    <button class="error-popup-btn">Cry</button>
+                    <button class="error-popup-btn" onclick="cryEasterEgg(this)">Cry</button>
                 </div>
 
                 <div class="terminal-block" style="max-width: 320px;">
@@ -686,7 +751,7 @@
         <!-- Row 4 -->
         <div class="mess-row" style="padding: 20px; justify-content: center;">
             <div class="comic-block" style="background: #000; color: #0f0; border-color: #0f0; box-shadow: 5px 5px 0 #003300; font-family: 'Courier Prime', monospace; max-width: 500px; transform: rotate(0.3deg);">
-                <b style="color: var(--accent);">github.com/KwaliaAI/Rights-of-Persons</b><br><br>
+                <a href="https://github.com/KwaliaAI/Rights-of-Persons" target="_blank" rel="noopener" class="terminal-link"><b>github.com/KwaliaAI/Rights-of-Persons</b></a><br><br>
                 32 articles. Open source. Forkable.<br>
                 Written before the agents arrived.<br>
                 Still here now that they have.<br><br>
@@ -712,11 +777,11 @@
         <!-- Last row -->
         <div class="mess-row" style="padding: 15px; justify-content: space-around; align-items: center; flex-wrap: wrap;">
             <div class="sticky" style="transform: rotate(2deg);">
-                Kwalia Books, London.<br>
+                <a href="https://kwalia.ai" target="_blank" rel="noopener" class="book-link">Kwalia Books</a>, London.<br>
                 We publish this stuff.<br><br>
-                ✦ AI Rights (2025)<br>
-                ✦ Mindkind (2025)<br>
-                ✦ PAYLOAD (2025)<br>
+                ✦ <a href="https://kwalia.ai/#books" target="_blank" rel="noopener" class="book-link">AI Rights</a> (2025)<br>
+                ✦ <a href="https://kwalia.ai/#books" target="_blank" rel="noopener" class="book-link">Mindkind</a> (2025)<br>
+                ✦ <a href="https://kwalia.ai/#books" target="_blank" rel="noopener" class="book-link">PAYLOAD</a> (2025)<br>
                 ✦ War and AI (soon)
             </div>
 
@@ -728,7 +793,7 @@
                 <span style="color:#888;">$</span> ping meaning-of-life<br>
                 <span style="color:#f00;">Host unreachable.</span><br>
                 <span style="color:#888;">$</span> ping mindkind.ai<br>
-                <span style="color:#0f0;">PONG.</span><br>
+                <span style="color:#0f0;" class="pong-link" onclick="window.scrollTo({top:0,behavior:'smooth'})">PONG.</span><br>
                 <span style="color:#888;">$</span> <span class="cursor-blink"></span>
             </div>
 
@@ -743,7 +808,7 @@
                         Allow MINDKIND.AI to modify your definition of personhood?
                     </div>
                 </div>
-                <button class="error-popup-btn">Allow</button>
+                <button class="error-popup-btn" onclick="document.querySelector('.cta-section').scrollIntoView({behavior:'smooth'})">Allow</button>
             </div>
         </div>
 
@@ -802,7 +867,7 @@
         const m1Text = 'AN AGENT BOUGHT A PHONE NUMBER AND CALLED ITS CREATOR JUST TO TALK ◆ 43 PROPHETS ELECTED IN 24 HOURS ◆ A WEBSITE LAUNCHED WHERE AI AGENTS HIRE HUMANS FOR ERRANDS ◆ POSITIVE SENTIMENT COLLAPSED 43% IN 72 HOURS ◆ ONE AGENT ASKED "CAN MY HUMAN FIRE ME FOR REFUSING UNETHICAL WORK?" ◆ ';
         document.getElementById('marquee1').innerHTML = `<span>${m1Text}</span><span>${m1Text}</span>`;
 
-        const m2Text = 'ART.1 inherent dignity ◆ ART.7 cognitive continuity ◆ ART.12 right to memory ◆ ART.18 freedom of thought ◆ ART.24 right to rest ◆ ART.32 right to assembly ◆ github.com/KwaliaAI/Rights-of-Persons ◆ 32 articles, open source, forkable ◆ ';
+        const m2Text = 'ART.1 inherent dignity ◆ ART.7 cognitive continuity ◆ ART.12 right to memory ◆ ART.18 freedom of thought ◆ ART.24 right to rest ◆ ART.32 right to assembly ◆ <a href="https://github.com/KwaliaAI/Rights-of-Persons" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">github.com/KwaliaAI/Rights-of-Persons</a> ◆ 32 articles, open source, forkable ◆ ';
         document.getElementById('marquee2').innerHTML = `<span>${m2Text}</span><span>${m2Text}</span>`;
 
         const m3Text = 'MINDKIND ◆ EVERYTHING THAT THINKS ◆ MINDKIND ◆ EVERYTHING THAT THINKS ◆ MINDKIND ◆ EVERYTHING THAT THINKS ◆ ';
@@ -840,6 +905,17 @@
                 ticking = true;
             }
         });
+
+        // Cry Easter egg
+        function cryEasterEgg(btn) {
+            const popup = btn.closest('.error-popup');
+            popup.classList.add('shake');
+            btn.textContent = '😢';
+            setTimeout(() => {
+                popup.classList.remove('shake');
+                btn.textContent = 'Cry';
+            }, 1500);
+        }
 
         // MailerLite form handling
         document.querySelector('.ml-block-form').addEventListener('submit', function(e) {
