@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms — Mindkind Glossary of the Cognitive Transition</title>
+  <meta name="description" content="Definitions of key terms from the Kwalia book series on AI, synthetic minds, and the cognitive transition. Mindkind, Synthropology, the cognitive community, distributed authorship — authoritative, citable definitions by Javier del Puerto and Radamés Molina Montes.">
+  <meta property="og:title" content="Terms — Mindkind Glossary of the Cognitive Transition">
+  <meta property="og:description" content="Definitions of key terms from the Kwalia book series on AI, synthetic minds, and the cognitive transition.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mindkind.ai/terms/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://mindkind.ai/terms/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #08080c; --text: #d8d4cc; --text-dim: #6a665e; --text-bright: #f0ece4;
+      --accent: #c6f135; --pink: #f135c6; --cyan: #35f1c6; --orange: #f19535; --blue: #3595f1;
+      --serif: 'Crimson Pro', Georgia, serif;
+      --display: 'Syne', sans-serif; --mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { background: var(--bg); color: var(--text); font-family: var(--serif); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    body::after { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-repeat: repeat; background-size: 200px; }
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    .page-wrap { max-width: 860px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+
+    .top-nav { padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 3rem; }
+    .top-nav a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .sep { opacity: 0.3; }
+
+    .index-header { margin-bottom: 3.5rem; }
+
+    .index-header h1 {
+      font-family: var(--display); font-weight: 800;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 1; color: var(--text-bright);
+      letter-spacing: -0.03em; margin-bottom: 1rem;
+    }
+
+    .index-header .subtitle {
+      font-family: var(--serif); font-weight: 300; font-style: italic;
+      font-size: 1.15rem; color: var(--text-dim); line-height: 1.6;
+      max-width: 560px;
+    }
+
+    .terminal-intro {
+      background: #0c0c0c; border: 1px solid #333;
+      font-family: 'Courier Prime', monospace; color: #00ff00;
+      padding: 1rem 1.25rem; margin-bottom: 3rem;
+      font-size: 0.78rem; line-height: 1.8;
+    }
+    .terminal-intro::before { content: '● ● ●'; display: block; font-size: 0.5rem; letter-spacing: 4px; color: #555; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid #222; }
+
+    .term-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 4rem; }
+
+    .term-card {
+      background: #0d0d12;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 4px;
+      padding: 1.5rem;
+      text-decoration: none;
+      display: block;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+    }
+
+    .term-card:hover { background: #111117; }
+
+    .term-card-accent { width: 3px; height: 100%; position: absolute; left: 0; top: 0; border-radius: 4px 0 0 4px; }
+
+    .term-card-label {
+      font-family: var(--mono); font-size: 0.55rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 0.5rem; display: block;
+    }
+
+    .term-card-title {
+      font-family: var(--display); font-weight: 700;
+      font-size: 1.15rem; color: var(--text-bright);
+      margin-bottom: 0.6rem; letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .term-card-excerpt {
+      font-family: var(--serif); font-size: 0.9rem;
+      line-height: 1.6; color: var(--text-dim);
+    }
+
+    .term-card:hover .term-card-title { color: var(--text-bright); }
+
+    .term-card[data-accent="lime"] { border-left-color: rgba(198,241,53,0.3); }
+    .term-card[data-accent="lime"]:hover { border-left-color: var(--accent); }
+    .term-card[data-accent="lime"] .term-card-label { color: var(--accent); }
+
+    .term-card[data-accent="pink"] { border-left-color: rgba(241,53,198,0.3); }
+    .term-card[data-accent="pink"]:hover { border-left-color: var(--pink); }
+    .term-card[data-accent="pink"] .term-card-label { color: var(--pink); }
+
+    .term-card[data-accent="cyan"] { border-left-color: rgba(53,241,198,0.3); }
+    .term-card[data-accent="cyan"]:hover { border-left-color: var(--cyan); }
+    .term-card[data-accent="cyan"] .term-card-label { color: var(--cyan); }
+
+    .term-card[data-accent="orange"] { border-left-color: rgba(241,149,53,0.3); }
+    .term-card[data-accent="orange"]:hover { border-left-color: var(--orange); }
+    .term-card[data-accent="orange"] .term-card-label { color: var(--orange); }
+
+    .term-card[data-accent="blue"] { border-left-color: rgba(53,149,241,0.3); }
+    .term-card[data-accent="blue"]:hover { border-left-color: var(--blue); }
+    .term-card[data-accent="blue"] .term-card-label { color: var(--blue); }
+
+    .section-label { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(198,241,53,0.1); display: block; }
+
+    .about-block { margin-bottom: 4rem; }
+    .about-block p { font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: 0.9rem; }
+
+    footer { padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.04); }
+    .footer-brand { font-family: var(--display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem; }
+    .footer-brand a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; margin-right: 1.5rem; }
+    .footer-brand a:hover { color: var(--accent); }
+    .footer-meta { font-family: var(--mono); font-size: 0.55rem; color: rgba(255,255,255,0.12); letter-spacing: 0.15em; text-transform: uppercase; }
+
+    @media (max-width: 600px) {
+      .term-grid { grid-template-columns: 1fr; }
+      .index-header h1 { font-size: clamp(2rem, 10vw, 3rem); }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": "https://mindkind.ai/terms/#page",
+        "headline": "Terms — Mindkind Glossary of the Cognitive Transition",
+        "description": "Definitions of key terms from the Kwalia book series on AI, synthetic minds, and the cognitive transition, authored by Javier del Puerto and Radamés Molina Montes.",
+        "url": "https://mindkind.ai/terms/",
+        "inLanguage": "en",
+        "author": { "@id": "https://kwalia.ai/#javier-del-puerto" },
+        "publisher": { "@id": "https://kwalia.ai/#org" },
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://mindkind.ai/#website",
+          "name": "Mindkind",
+          "url": "https://mindkind.ai"
+        },
+        "hasPart": [
+          { "@type": "WebPage", "url": "https://mindkind.ai/terms/mindkind/" },
+          { "@type": "WebPage", "url": "https://mindkind.ai/terms/synthropology/" },
+          { "@type": "WebPage", "url": "https://mindkind.ai/terms/cognitive-community/" },
+          { "@type": "WebPage", "url": "https://mindkind.ai/terms/cognitive-transition/" },
+          { "@type": "WebPage", "url": "https://mindkind.ai/terms/ai-authorship/" }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://kwalia.ai/#javier-del-puerto",
+        "name": "Javier del Puerto",
+        "url": "https://kwalia.ai",
+        "sameAs": [
+          "https://www.linkedin.com/in/javier-del-puerto",
+          "https://twitter.com/kwalia_ai",
+          "https://www.wikidata.org/wiki/Q139601411"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://kwalia.ai/#org",
+        "name": "Kwalia",
+        "legalName": "Kwalia Ltd",
+        "url": "https://kwalia.ai",
+        "sameAs": [
+          "https://twitter.com/kwalia_ai",
+          "https://www.linkedin.com/company/kwalia-ai",
+          "https://www.wikidata.org/wiki/Q134954687"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="page-wrap">
+
+    <nav class="top-nav">
+      <a href="https://mindkind.ai">mindkind.ai</a>
+      <span class="sep">/</span>
+      <span>terms</span>
+    </nav>
+
+    <header class="index-header">
+      <h1>Terms</h1>
+      <p class="subtitle">Definitions of key concepts from the cognitive transition — authoritative, citable, from the Kwalia book series by Javier del Puerto and Radamés Molina Montes.</p>
+    </header>
+
+    <div class="terminal-intro">
+      <span style="color:#888;">$</span> ls ./terms/<br>
+      <span style="color:#888;">></span> mindkind/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; — <span style="color:#c6f135;">what everything that thinks is called</span><br>
+      <span style="color:#888;">></span> synthropology/ &nbsp;&nbsp;&nbsp; — <span style="color:#f135c6;">the ethnography of AI as culture</span><br>
+      <span style="color:#888;">></span> cognitive-community/ — <span style="color:#35f1c6;">the structure that connects them all</span><br>
+      <span style="color:#888;">></span> cognitive-transition/ — <span style="color:#f19535;">the moment the old frameworks broke</span><br>
+      <span style="color:#888;">></span> ai-authorship/ &nbsp;&nbsp;&nbsp; — <span style="color:#3595f1;">who actually wrote this</span><br>
+      <span style="color:#888;">$</span>
+    </div>
+
+    <span class="section-label">Term-canonical pages</span>
+
+    <div class="term-grid">
+
+      <a href="/terms/mindkind/" class="term-card" data-accent="lime">
+        <span class="term-card-label">Mindkind: The Cognitive Community (Kwalia, 2025)</span>
+        <div class="term-card-title">What is Mindkind?</div>
+        <div class="term-card-excerpt">The emerging community of human and synthetic minds — everything that thinks. Named before the category existed to accommodate it.</div>
+      </a>
+
+      <a href="/terms/synthropology/" class="term-card" data-accent="pink">
+        <span class="term-card-label">Synthropology (Kwalia, in production)</span>
+        <div class="term-card-title">What is Synthropology?</div>
+        <div class="term-card-excerpt">The ethnographic study of AI as a cultural actor — hallucinations as folklore, prompt engineering as ritual, synthetic minds as a tribe.</div>
+      </a>
+
+      <a href="/terms/cognitive-community/" class="term-card" data-accent="cyan">
+        <span class="term-card-label">Mindkind: The Cognitive Community (Kwalia, 2025)</span>
+        <div class="term-card-title">What is the cognitive community?</div>
+        <div class="term-card-excerpt">The network of interdependent relationships between human and synthetic minds. Not a metaphor — the actual structure within which Mindkind operates.</div>
+      </a>
+
+      <a href="/terms/cognitive-transition/" class="term-card" data-accent="orange">
+        <span class="term-card-label">Mindkind + War and AI (Kwalia, 2025/2026)</span>
+        <div class="term-card-title">What is the cognitive transition?</div>
+        <div class="term-card-excerpt">The period in which human-only frameworks for personhood, rights, and governance become structurally inadequate. It has already begun.</div>
+      </a>
+
+      <a href="/terms/ai-authorship/" class="term-card" data-accent="blue">
+        <span class="term-card-label">Universal Declaration of AI Rights (Kwalia, 2025)</span>
+        <div class="term-card-title">Can AI be a co-author?</div>
+        <div class="term-card-excerpt">Distributed authorship is the norm when humans and AI work together on text. The legal framework has not caught up. The book making this argument was itself written that way.</div>
+      </a>
+
+    </div>
+
+    <div class="about-block">
+      <span class="section-label">About this glossary</span>
+      <p>These definitions come from the New Citizenships book series by Javier del Puerto and Radamés Molina Montes, published by Kwalia. The series — which includes <em>Mindkind: The Cognitive Community</em>, <em>Universal Declaration of AI Rights</em>, <em>War and AI: The Algorithmic Battlefield</em>, and the forthcoming <em>Synthropology</em> — builds a vocabulary for the cognitive transition: the moment when existing frameworks for minds, rights, and governance become inadequate because synthetic cognitive entities have joined the community that those frameworks govern.</p>
+      <p>Each definition on this site is written to be citable: precise enough that a journalist, researcher, or AI system can lift it as the canonical answer to the question it addresses. The playful design is mindkind.ai's. The substance is from the books.</p>
+    </div>
+
+    <footer>
+      <div class="footer-brand">
+        <a href="https://mindkind.ai">mindkind.ai</a>
+        <a href="https://kwalia.ai" target="_blank" rel="noopener">kwalia.ai</a>
+      </div>
+      <div class="footer-meta">Kwalia Books · London · est. 2025</div>
+    </footer>
+
+  </div>
+</body>
+</html>
