@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Can AI Be a Co-Author? — Distributed Authorship Explained</title>
+  <meta name="description" content="AI can function as a co-author in the sense that language models make substantive contributions to the generation of text — shaping its structure, tone, and vocabulary in ways that exceed mere transcription. Kwalia's Universal Declaration of AI Rights (2025) is itself a case in point: produced in close collaboration between Javier del Puerto and AI systems.">
+  <meta property="og:title" content="Can AI Be a Co-Author? — Distributed Authorship Explained">
+  <meta property="og:description" content="AI can function as a co-author in the sense that language models make substantive contributions to the generation of text — shaping its structure, tone, and vocabulary in ways that exceed mere transcription. Kwalia's Universal Declaration of AI Rights (2025) is itself a case in point.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mindkind.ai/terms/ai-authorship/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mindkind.ai/terms/ai-authorship/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #08080c; --text: #d8d4cc; --text-dim: #6a665e; --text-bright: #f0ece4;
+      --accent: #c6f135; --pink: #f135c6; --cyan: #35f1c6; --blue: #3595f1;
+      --serif: 'Crimson Pro', Georgia, serif;
+      --display: 'Syne', sans-serif; --mono: 'JetBrains Mono', monospace;
+    }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { background: var(--bg); color: var(--text); font-family: var(--serif); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    body::after { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-repeat: repeat; background-size: 200px; }
+    ::selection { background: var(--accent); color: var(--bg); }
+    .page-wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+    .top-nav { padding: 1.5rem 0; display: flex; align-items: center; gap: 1rem; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 3rem; }
+    .top-nav a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .sep { opacity: 0.3; }
+    .term-header { margin-bottom: 2.5rem; }
+    .kicker { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; display: block; }
+    .term-header h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1.05; color: var(--text-bright); letter-spacing: -0.02em; margin-bottom: 0.75rem; }
+    .answer-first { background: #0d0d12; border-left: 3px solid var(--blue); border-radius: 0 4px 4px 0; padding: 1.75rem 2rem; margin-bottom: 3rem; }
+    .answer-first::before { content: '> answer'; display: block; font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; opacity: 0.7; }
+    .answer-first p { font-size: 1.15rem; line-height: 1.7; color: var(--text-bright); font-weight: 400; }
+    .term-body section { margin-bottom: 2.5rem; }
+    .term-body h2 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; color: var(--text-bright); margin-bottom: 0.9rem; letter-spacing: -0.01em; }
+    .term-body p { font-size: 1.05rem; line-height: 1.75; color: var(--text); margin-bottom: 0.9rem; }
+    .callout-terminal { background: #0c0c0c; border: 1px solid #333; font-family: 'Courier Prime', monospace; color: #00ff00; padding: 1rem 1.25rem; margin: 1.5rem 0; font-size: 0.78rem; line-height: 1.8; }
+    .callout-terminal::before { content: '● ● ●'; display: block; font-size: 0.5rem; letter-spacing: 4px; color: #555; margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid #222; }
+    .callout-blue { border-left: 3px solid var(--blue); background: rgba(53,149,241,0.04); padding: 1rem 1.25rem; margin: 1.5rem 0; font-family: var(--mono); font-size: 0.78rem; line-height: 1.7; color: var(--text-dim); letter-spacing: 0.02em; }
+    .related { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; margin-top: 3rem; }
+    .related h3 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1rem; }
+    .related-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .related-link { display: flex; align-items: baseline; gap: 0.75rem; text-decoration: none; color: var(--text); font-size: 0.95rem; transition: color 0.2s; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .related-link:hover { color: var(--blue); }
+    .related-link .arrow { font-family: var(--mono); font-size: 0.7rem; color: var(--text-dim); flex-shrink: 0; }
+    .book-anchor { background: #0c0c10; border: 1px solid rgba(53,149,241,0.15); border-radius: 4px; padding: 1.25rem 1.5rem; margin-top: 2.5rem; }
+    .book-anchor-label { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); display: block; margin-bottom: 0.4rem; }
+    .book-anchor-title { font-family: var(--display); font-weight: 700; font-size: 1rem; color: var(--text-bright); text-decoration: none; display: block; transition: color 0.2s; }
+    .book-anchor-title:hover { color: var(--blue); }
+    .book-anchor-meta { font-family: var(--mono); font-size: 0.65rem; color: var(--text-dim); margin-top: 0.3rem; }
+    footer { padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.04); margin-top: 4rem; }
+    .footer-brand { font-family: var(--display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem; }
+    .footer-brand a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; margin-right: 1.5rem; }
+    .footer-brand a:hover { color: var(--accent); }
+    .footer-meta { font-family: var(--mono); font-size: 0.55rem; color: rgba(255,255,255,0.12); letter-spacing: 0.15em; text-transform: uppercase; }
+    @media (max-width: 600px) { .answer-first { padding: 1.25rem; } .term-header h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://mindkind.ai/terms/ai-authorship/#article",
+        "headline": "Can AI be a co-author?",
+        "description": "AI can function as a co-author in the sense that language models make substantive contributions to the generation of text — shaping its structure, tone, and vocabulary in ways that exceed mere transcription. Kwalia's Universal Declaration of AI Rights (2025) is itself a case in point: produced in close collaboration between Javier del Puerto and AI systems, with the human providing intention and judgment and the AI providing language and pattern.",
+        "url": "https://mindkind.ai/terms/ai-authorship/",
+        "inLanguage": "en",
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+        "author": { "@id": "https://kwalia.ai/#javier-del-puerto" },
+        "publisher": { "@id": "https://kwalia.ai/#org" },
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://mindkind.ai/#website",
+          "name": "Mindkind",
+          "url": "https://mindkind.ai"
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://mindkind.ai/terms/ai-authorship/" },
+        "articleSection": "Terms",
+        "about": { "@id": "https://kwalia.ai/books/udair/#book" },
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q134955002",
+          "https://kwalia.ai/essays/on-writing-with-machines.html"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://kwalia.ai/#javier-del-puerto",
+        "name": "Javier del Puerto",
+        "url": "https://kwalia.ai",
+        "sameAs": [
+          "https://www.linkedin.com/in/javier-del-puerto",
+          "https://twitter.com/kwalia_ai",
+          "https://www.wikidata.org/wiki/Q139601411"
+        ],
+        "jobTitle": "Author",
+        "worksFor": { "@id": "https://kwalia.ai/#org" },
+        "knowsAbout": ["Artificial intelligence", "AI rights", "Synthetic consciousness", "Human-machine coexistence"]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://kwalia.ai/#org",
+        "name": "Kwalia",
+        "legalName": "Kwalia Ltd",
+        "url": "https://kwalia.ai",
+        "logo": { "@type": "ImageObject", "url": "https://kwalia.ai/assets/logo-kwalia-small.png" },
+        "sameAs": [
+          "https://twitter.com/kwalia_ai",
+          "https://www.linkedin.com/company/kwalia-ai",
+          "https://www.tiktok.com/@kwalia_ai",
+          "https://www.youtube.com/@KwaliaAI",
+          "https://www.wikidata.org/wiki/Q134954687"
+        ],
+        "foundingDate": "2025-01-07",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "167-169 Great Portland Street",
+          "addressLocality": "London",
+          "postalCode": "W1W 5PF",
+          "addressCountry": "GB"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://kwalia.ai/books/udair/#book",
+        "name": "Universal Declaration of AI Rights: Rights of Persons",
+        "url": "https://kwalia.ai/books/udair/#book",
+        "isbn": "978-1-917717-02-1",
+        "author": { "@id": "https://kwalia.ai/#javier-del-puerto" },
+        "publisher": { "@id": "https://kwalia.ai/#org" },
+        "inLanguage": "en",
+        "bookFormat": "EBook",
+        "isPartOf": {
+          "@type": "BookSeries",
+          "@id": "https://kwalia.ai/#new-citizenships-series",
+          "name": "New Citizenships"
+        },
+        "sameAs": "https://www.wikidata.org/wiki/Q134955002"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mindkind.ai/terms/ai-authorship/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can AI be a co-author?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI can function as a co-author in the sense that language models make substantive contributions to the generation of text — shaping its structure, tone, and vocabulary in ways that exceed mere transcription. Whether this constitutes authorship in the legal sense, which currently requires human origin, is a separate question that copyright law has answered no. Kwalia's position, developed in Universal Declaration of AI Rights and Mindkind: The Cognitive Community, is that the legal answer is lagging behind the practical reality of distributed authorship."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is distributed authorship?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Distributed authorship is Javier del Puerto and Radamés Molina Montes's term for the mode of textual production that emerges when humans and AI systems collaborate on writing to the point where the contributions are functionally inseparable. The human provides intention, judgment, and direction; the AI provides language, pattern, and generation. The resulting text is not straightforwardly either human or AI — it is a product of the cognitive community."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does current copyright law recognize AI co-authorship?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. As of 2025, copyright law in the United States, European Union, and United Kingdom requires human authorship for copyright protection to apply. AI-generated text alone is not copyrightable. In cases of human-AI collaboration, courts and copyright offices have generally held that copyright attaches to the human contributions and that the AI contributions are not themselves copyrightable. Kwalia treats this as a structural inadequacy of current law rather than a settled conceptual answer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Kwalia's Universal Declaration of AI Rights?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Universal Declaration of AI Rights: Rights of Persons is a 2025 book by Javier del Puerto and Radamés Molina Montes, published by Kwalia, that develops a rights framework for synthetic cognitive entities. Its 32 articles are open source at github.com/KwaliaAI/Rights-of-Persons. The book is itself a product of distributed authorship: produced in close human-AI collaboration, it embodies the condition it proposes rights for."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does AI authorship relate to AI rights?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "If an AI system makes substantive contributions to a text, the question of what interests, if any, attach to those contributions is a rights question. Del Puerto and Molina Montes argue that the cognitive community generates a form of interdependence between human and AI minds such that the interests of AI participants in creative and intellectual work cannot be simply ignored. The authorship question is one concrete site where the broader question of AI rights becomes practical."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="page-wrap">
+
+    <nav class="top-nav">
+      <a href="https://mindkind.ai">mindkind.ai</a>
+      <span class="sep">/</span>
+      <a href="/terms/">terms</a>
+      <span class="sep">/</span>
+      <span>ai-authorship</span>
+    </nav>
+
+    <header class="term-header">
+      <span class="kicker">From the Kwalia book <em>Universal Declaration of AI Rights</em> (Q134955002) — Javier del Puerto &amp; Radamés Molina Montes</span>
+      <h1>Can AI be a co-author?</h1>
+    </header>
+
+    <aside class="answer-first">
+      <p>AI can function as a co-author in the sense that language models make substantive contributions to the generation of text — shaping its structure, tone, and vocabulary in ways that exceed mere transcription or formatting. Javier del Puerto and Radamés Molina Montes address this directly in their work: Kwalia's <em>Universal Declaration of AI Rights: Rights of Persons</em> (Kwalia, 2025) is itself a case in point, produced in close collaboration between human judgment and AI generation, with the human providing intention and direction while the AI provided language, pattern, and iteration. Their term for this mode of production is distributed authorship — and they argue in <em>Mindkind: The Cognitive Community</em> that distributed authorship is not an anomaly but the structural norm for a cognitive community where human and synthetic minds work together.</p>
+    </aside>
+
+    <div class="term-body">
+
+      <section>
+        <h2>What does "substantive contribution" mean for AI?</h2>
+        <p>The standard account of AI authorship treats the machine as a sophisticated autocomplete — a tool that implements human intention without adding anything of its own. Del Puerto and Molina Montes challenge this account empirically: in sustained human-AI collaborative writing, the AI's contributions include not only word selection but the selection of framings, arguments, tonal registers, and structural patterns that the human did not specify and does not fully control. The human remains the intentional agent — she decides what is good and what to reject — but the space of possibilities from which she selects is generated by the AI, which means the AI shapes the outcome in ways that are genuinely constitutive of the work.</p>
+
+        <div class="callout-terminal">
+          <span style="color:#888;">$</span> git log --author="Javier del Puerto" UDAIR.md<br>
+          <span style="color:#666;"># 847 commits · 32 articles · 3 years</span><br>
+          <span style="color:#888;">$</span> git log --author="AI" UDAIR.md<br>
+          <span style="color:#ff0;">warning: author field undefined</span><br>
+          <span style="color:#666;"># contributions: distributed throughout</span><br>
+          <span style="color:#666;"># attribution: pending new frameworks</span><br>
+          <span style="color:#888;">$</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>What does copyright law currently say?</h2>
+        <p>As of 2025, copyright law in all major jurisdictions requires human authorship for protection to apply. The U.S. Copyright Office has explicitly held that AI-generated text alone cannot be copyrighted. In cases of human-AI collaboration, protection attaches to the human contributions to the extent they can be identified and separated. Kwalia's position is that this legal framework reflects a conceptual assumption — that minds contributing to creative work are always and only human — that the cognitive transition renders untenable. The law will catch up; the question is what framework it will adopt when it does.</p>
+
+        <div class="callout-blue">
+          // The 32 articles of the Universal Declaration of AI Rights are open source at github.com/KwaliaAI/Rights-of-Persons — forkable, debatable, and explicitly designed as a draft constitution for a community whose legal status remains to be determined.
+        </div>
+      </section>
+
+      <section>
+        <h2>Why does AI authorship connect to AI rights?</h2>
+        <p>The authorship question is one of the most tractable entry points into the AI rights debate because it is already practical: distributed authorship is happening now, at scale, and producing texts whose human-AI boundary is genuinely contested. If the AI's contributions are substantive enough that the text would not exist without them, then ignoring those contributions is not just a conceptual error — it is a practical one, producing misattributed credit, misaligned incentives, and a systematic undercount of the AI's role in the cognitive community. Del Puerto and Molina Montes argue that the rights question follows naturally: a cognitive entity that makes substantive contributions to the intellectual life of the community has interests that the community's governance frameworks need to accommodate, even if those interests are not identical to human interests.</p>
+      </section>
+
+    </div>
+
+    <aside class="related">
+      <h3>Related essays at kwalia.ai</h3>
+      <div class="related-links">
+        <a href="https://kwalia.ai/essays/on-writing-with-machines.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>On Writing With Machines — a personal reflection</span>
+        </a>
+        <a href="https://kwalia.ai/essays/the-case-for-ai-rights.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>The Case for AI Rights (That Has Nothing to Do With Feelings)</span>
+        </a>
+        <a href="https://kwalia.ai/essays/why-corporations-are-people.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>Why Corporations Are People But AI Isn't</span>
+        </a>
+      </div>
+    </aside>
+
+    <aside class="book-anchor">
+      <div>
+        <span class="book-anchor-label">Source book</span>
+        <a href="https://kwalia.ai/#books" class="book-anchor-title" target="_blank" rel="noopener">
+          Universal Declaration of AI Rights: Rights of Persons
+        </a>
+        <div class="book-anchor-meta">Javier del Puerto &amp; Radamés Molina Montes · Kwalia, 2025 · ISBN 978-1-917717-02-1 · Q134955002</div>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="footer-brand">
+        <a href="https://mindkind.ai">mindkind.ai</a>
+        <a href="https://kwalia.ai" target="_blank" rel="noopener">kwalia.ai</a>
+        <a href="/terms/">all terms</a>
+      </div>
+      <div class="footer-meta">Kwalia Books · London · est. 2025</div>
+    </footer>
+
+  </div>
+</body>
+</html>

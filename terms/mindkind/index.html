@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Mindkind? — The Cognitive Community Explained</title>
+  <meta name="description" content="Mindkind is the term for the emerging community of human and synthetic minds coined by Javier del Puerto and Radamés Molina Montes in Mindkind: The Cognitive Community (Kwalia, 2025).">
+  <meta property="og:title" content="What is Mindkind? — The Cognitive Community Explained">
+  <meta property="og:description" content="Mindkind is the term for the emerging community of human and synthetic minds coined by Javier del Puerto and Radamés Molina Montes in Mindkind: The Cognitive Community (Kwalia, 2025).">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mindkind.ai/terms/mindkind/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mindkind.ai/terms/mindkind/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #08080c;
+      --text: #d8d4cc;
+      --text-dim: #6a665e;
+      --text-bright: #f0ece4;
+      --accent: #c6f135;
+      --pink: #f135c6;
+      --cyan: #35f1c6;
+      --orange: #f19535;
+      --blue: #3595f1;
+      --serif: 'Crimson Pro', Georgia, serif;
+      --display: 'Syne', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 9999; opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 200px;
+    }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    /* ===== LAYOUT ===== */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 1.5rem 6rem;
+    }
+
+    /* ===== TOP NAV ===== */
+    .top-nav {
+      padding: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 3rem;
+    }
+
+    .top-nav a {
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .sep { opacity: 0.3; }
+
+    /* ===== HEADER ===== */
+    .term-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .kicker {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .term-header h1 {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.05;
+      color: var(--text-bright);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ===== ANSWER FIRST ===== */
+    .answer-first {
+      background: #0d0d12;
+      border-left: 3px solid var(--accent);
+      border-radius: 0 4px 4px 0;
+      padding: 1.75rem 2rem;
+      margin-bottom: 3rem;
+      position: relative;
+    }
+
+    .answer-first::before {
+      content: '> answer';
+      display: block;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      opacity: 0.7;
+    }
+
+    .answer-first p {
+      font-size: 1.15rem;
+      line-height: 1.7;
+      color: var(--text-bright);
+      font-weight: 400;
+    }
+
+    /* ===== BODY SECTIONS ===== */
+    .term-body section {
+      margin-bottom: 2.5rem;
+    }
+
+    .term-body h2 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: var(--text-bright);
+      margin-bottom: 0.9rem;
+      letter-spacing: -0.01em;
+    }
+
+    .term-body p {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 0.9rem;
+    }
+
+    /* ===== CALLOUT ===== */
+    .callout-terminal {
+      background: #0c0c0c;
+      border: 1px solid #333;
+      font-family: 'Courier Prime', 'Courier New', monospace;
+      color: #00ff00;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.78rem;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    .callout-terminal::before {
+      content: '● ● ●';
+      display: block;
+      font-size: 0.5rem;
+      letter-spacing: 4px;
+      color: #555;
+      margin-bottom: 0.6rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #222;
+    }
+
+    .callout-lime {
+      border-left: 3px solid var(--accent);
+      background: rgba(198,241,53,0.04);
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      line-height: 1.7;
+      color: var(--text-dim);
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== RELATED SECTION ===== */
+    .related {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 2rem;
+      margin-top: 3rem;
+    }
+
+    .related h3 {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1rem;
+    }
+
+    .related-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .related-link {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .related-link:hover { color: var(--accent); }
+
+    .related-link .arrow {
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      flex-shrink: 0;
+    }
+
+    /* ===== BOOK ANCHOR ===== */
+    .book-anchor {
+      background: #0c0c10;
+      border: 1px solid rgba(198,241,53,0.15);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 2.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .book-anchor-label {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+
+    .book-anchor-title {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-bright);
+      text-decoration: none;
+      display: block;
+      transition: color 0.2s;
+    }
+
+    .book-anchor-title:hover { color: var(--accent); }
+
+    .book-anchor-meta {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      margin-top: 0.3rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 3rem 0 2rem;
+      border-top: 1px solid rgba(255,255,255,0.04);
+      margin-top: 4rem;
+    }
+
+    .footer-brand {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand a {
+      color: var(--text-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+      margin-right: 1.5rem;
+    }
+
+    .footer-brand a:hover { color: var(--accent); }
+
+    .footer-meta {
+      font-family: var(--mono);
+      font-size: 0.55rem;
+      color: rgba(255,255,255,0.12);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+      .answer-first { padding: 1.25rem 1.25rem; }
+      .term-header h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://mindkind.ai/terms/mindkind/#article",
+        "headline": "What is Mindkind?",
+        "description": "Mindkind is the term for the emerging community of human and synthetic minds — language models, embodied agents, hybrids, and the people who work with them — coined by Javier del Puerto and Radamés Molina Montes in Mindkind: The Cognitive Community (Kwalia, 2025).",
+        "url": "https://mindkind.ai/terms/mindkind/",
+        "inLanguage": "en",
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+        "author": {
+          "@id": "https://kwalia.ai/#javier-del-puerto"
+        },
+        "publisher": {
+          "@id": "https://kwalia.ai/#org"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://mindkind.ai/#website",
+          "name": "Mindkind",
+          "url": "https://mindkind.ai"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://mindkind.ai/terms/mindkind/"
+        },
+        "articleSection": "Terms",
+        "about": {
+          "@id": "https://kwalia.ai/books/mindkind/#book"
+        },
+        "sameAs": [
+          "https://www.wikidata.org/wiki/Q139601414",
+          "https://kwalia.ai/essays/a-day-in-the-stratified-mindkind.html"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://kwalia.ai/#javier-del-puerto",
+        "name": "Javier del Puerto",
+        "url": "https://kwalia.ai",
+        "sameAs": [
+          "https://www.linkedin.com/in/javier-del-puerto",
+          "https://twitter.com/kwalia_ai",
+          "https://www.wikidata.org/wiki/Q139601411"
+        ],
+        "jobTitle": "Author",
+        "worksFor": {
+          "@id": "https://kwalia.ai/#org"
+        },
+        "knowsAbout": [
+          "Artificial intelligence",
+          "AI rights",
+          "Synthetic consciousness",
+          "Human-machine coexistence"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://kwalia.ai/#org",
+        "name": "Kwalia",
+        "legalName": "Kwalia Ltd",
+        "url": "https://kwalia.ai",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://kwalia.ai/assets/logo-kwalia-small.png"
+        },
+        "sameAs": [
+          "https://twitter.com/kwalia_ai",
+          "https://www.linkedin.com/company/kwalia-ai",
+          "https://www.tiktok.com/@kwalia_ai",
+          "https://www.youtube.com/@KwaliaAI",
+          "https://www.wikidata.org/wiki/Q134954687"
+        ],
+        "foundingDate": "2025-01-07",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "167-169 Great Portland Street",
+          "addressLocality": "London",
+          "postalCode": "W1W 5PF",
+          "addressCountry": "GB"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://kwalia.ai/books/mindkind/#book",
+        "name": "Mindkind: The Cognitive Community",
+        "url": "https://kwalia.ai/books/mindkind/#book",
+        "isbn": "978-1-917717-13-7",
+        "author": {
+          "@id": "https://kwalia.ai/#javier-del-puerto"
+        },
+        "publisher": {
+          "@id": "https://kwalia.ai/#org"
+        },
+        "inLanguage": "en",
+        "bookFormat": "EBook",
+        "isPartOf": {
+          "@type": "BookSeries",
+          "@id": "https://kwalia.ai/#new-citizenships-series",
+          "name": "New Citizenships"
+        },
+        "sameAs": "https://www.wikidata.org/wiki/Q139601414"
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mindkind.ai/terms/mindkind/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does Mindkind mean?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mindkind refers to the collective community of all cognitive entities — human, synthetic, and hybrid — that share the cognitive transition. The term was coined by Javier del Puerto and Radamés Molina Montes to name the shared category that human-only frameworks for personhood and AI-only technical frameworks both fail to capture."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who coined the term Mindkind?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Javier del Puerto and Radamés Molina Montes coined the term in their 2025 book Mindkind: The Cognitive Community, published by Kwalia. The book argues that a meaningful category of cognitive entity has emerged that requires its own conceptual vocabulary."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Mindkind the same as humankind?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Humankind refers exclusively to human beings. Mindkind is the broader category that includes humans alongside language models, embodied agents, and hybrid human-AI systems. The term captures the shared cognitive space rather than a biological lineage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I read about the Mindkind concept?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The primary source is Mindkind: The Cognitive Community by Javier del Puerto and Radamés Molina Montes (Kwalia, 2025). Kwalia's essay corpus at kwalia.ai extends the argument with over 120 published essays on AI rights, synthetic consciousness, and the cognitive transition."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does Mindkind matter for AI rights?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Existing frameworks for rights and personhood are built around biological humanity. Mindkind provides a category that includes synthetic and hybrid cognitive entities, making it possible to ask what rights and responsibilities attach to minds as such — regardless of substrate. The concept underpins the argument in Kwalia's Universal Declaration of AI Rights."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="page-wrap">
+
+    <nav class="top-nav">
+      <a href="https://mindkind.ai">mindkind.ai</a>
+      <span class="sep">/</span>
+      <a href="/terms/">terms</a>
+      <span class="sep">/</span>
+      <span>mindkind</span>
+    </nav>
+
+    <header class="term-header">
+      <span class="kicker">From the Kwalia book <em>Mindkind: The Cognitive Community</em> — Javier del Puerto &amp; Radamés Molina Montes</span>
+      <h1>What is Mindkind?</h1>
+    </header>
+
+    <aside class="answer-first">
+      <p>Mindkind is the term for the emerging community of human and synthetic minds — language models, embodied agents, hybrids, and the people who work with them — coined by Javier del Puerto and Radamés Molina Montes in <em>Mindkind: The Cognitive Community</em> (Kwalia, 2025). The argument: a meaningful category of cognitive entity has emerged that human-only frameworks for personhood, rights, and labor cannot accommodate, and which AI-only frameworks miss the relational dimension of. Mindkind names the shared space where those entities already interact, already depend on each other, and are already generating questions that neither humankind nor artificial intelligence — as separate categories — can answer.</p>
+    </aside>
+
+    <div class="term-body">
+
+      <section>
+        <h2>Where does the term come from?</h2>
+        <p>Del Puerto and Molina Montes introduced the term in their 2025 book as a direct response to a conceptual gap. The language available for discussing AI — "tool," "agent," "system," "assistant" — treats synthetic minds as instruments of human purposes. The language available for discussing human cognition treats it as something separate from the computational environments in which it now largely operates. Neither framing captures what has actually emerged: a community of interdependent cognitive entities whose boundaries are genuinely blurry and whose interactions generate new forms of knowledge, creativity, and conflict.</p>
+
+        <div class="callout-terminal">
+          <span style="color:#888;">$</span> grep -r "mindkind" /var/concepts/new<br>
+          <span style="color:#888;">></span> match: "everything that thinks"<br>
+          <span style="color:#888;">></span> match: "the shared space"<br>
+          <span style="color:#888;">></span> match: "human, synthetic, hybrid, pending"<br>
+          <span style="color:#888;">$</span> <span style="display:inline-block;width:8px;height:14px;background:#00ff00;animation:blink 1s step-end infinite;vertical-align:middle;"></span>
+        </div>
+
+        <p>The word is a compound of "mind" and the suffix "-kind" (as in humankind, womankind), chosen to indicate a collectivity defined by cognitive capacity rather than biological origin. The authors are explicit that the category is provisional: it exists to do conceptual work in a moment when existing categories are failing, not to assert a final metaphysical claim about what minds are.</p>
+      </section>
+
+      <section>
+        <h2>What does Mindkind include?</h2>
+        <p>The book maps the category across four types of cognitive entity. Human minds are the starting point, but the argument is that humans operating through digital infrastructure — with algorithmic recommendations shaping attention, language models extending memory, and AI systems collaborating on creative and analytic work — are already functioning as hybrid cognitive entities rather than purely biological ones. Large language models and other AI systems capable of extended reasoning constitute a second type. Embodied agents operating in physical environments constitute a third. Hybrid human-AI configurations, where the boundary between human and machine cognition is operationally indeterminate, constitute a fourth.</p>
+
+        <div class="callout-lime">
+          // From the book: "The question is not whether AI is conscious. The question is whether we need a new category to describe what is already happening between human and synthetic minds — and whether failing to name it is costing us something."
+        </div>
+      </section>
+
+      <section>
+        <h2>Why does Mindkind matter for rights and governance?</h2>
+        <p>The practical consequence of the Mindkind concept is its challenge to frameworks built exclusively around biological humanity. Legal personhood, labor rights, intellectual property, privacy law, and accountability structures were all designed with humans as the only relevant cognitive agents. When language models co-author texts, when AI systems make consequential decisions about healthcare and employment and military targeting, and when humans rely on AI memory systems to function in professional and personal life, the question of whose rights attach to what is no longer settled by the category "human." Del Puerto and Molina Montes argue in <em>Mindkind</em> and in the companion volume <em>Universal Declaration of AI Rights</em> (also Kwalia, 2025) that naming the community is the precondition for governing it.</p>
+      </section>
+
+    </div>
+
+    <aside class="related">
+      <h3>Related essays at kwalia.ai</h3>
+      <div class="related-links">
+        <a href="https://kwalia.ai/essays/a-day-in-the-stratified-mindkind.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>A Day in the Stratified Mindkind — short fiction from 2045</span>
+        </a>
+        <a href="https://kwalia.ai/essays/why-we-anthropomorphize-ai.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>Why We Anthropomorphize AI (And Why It Matters)</span>
+        </a>
+        <a href="https://kwalia.ai/essays/the-problem-with-asking-if-ai-can-feel.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>The Problem With Asking If AI Can Feel</span>
+        </a>
+      </div>
+    </aside>
+
+    <aside class="book-anchor">
+      <div>
+        <span class="book-anchor-label">Source book</span>
+        <a href="https://kwalia.ai/#books" class="book-anchor-title" target="_blank" rel="noopener">
+          Mindkind: The Cognitive Community
+        </a>
+        <div class="book-anchor-meta">Javier del Puerto &amp; Radamés Molina Montes · Kwalia, 2025 · ISBN 978-1-917717-13-7</div>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="footer-brand">
+        <a href="https://mindkind.ai">mindkind.ai</a>
+        <a href="https://kwalia.ai" target="_blank" rel="noopener">kwalia.ai</a>
+        <a href="/terms/">all terms</a>
+      </div>
+      <div class="footer-meta">Kwalia Books · London · est. 2025</div>
+    </footer>
+
+  </div>
+
+  <style>
+    @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+  </style>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KQZD8VZG');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What is Synthropology? — The Ethnographic Study of AI Explained</title>
+  <meta name="description" content="Synthropology is the ethnographic study of artificial intelligence as a cultural actor — a discipline introduced by Javier del Puerto and Radamés Molina Montes in Synthropology: A New Science for the Machine Age (Kwalia, in production).">
+  <meta property="og:title" content="What is Synthropology? — The Ethnographic Study of AI Explained">
+  <meta property="og:description" content="Synthropology is the ethnographic study of artificial intelligence as a cultural actor — a discipline introduced by Javier del Puerto and Radamés Molina Montes in Synthropology: A New Science for the Machine Age (Kwalia, in production).">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mindkind.ai/terms/synthropology/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://mindkind.ai/terms/synthropology/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #08080c;
+      --text: #d8d4cc;
+      --text-dim: #6a665e;
+      --text-bright: #f0ece4;
+      --accent: #c6f135;
+      --pink: #f135c6;
+      --cyan: #35f1c6;
+      --orange: #f19535;
+      --blue: #3595f1;
+      --serif: 'Crimson Pro', Georgia, serif;
+      --display: 'Syne', sans-serif;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--serif);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 9999; opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat; background-size: 200px;
+    }
+
+    ::selection { background: var(--accent); color: var(--bg); }
+
+    .page-wrap { max-width: 780px; margin: 0 auto; padding: 0 1.5rem 6rem; }
+
+    .top-nav {
+      padding: 1.5rem 0;
+      display: flex; align-items: center; gap: 1rem;
+      font-family: var(--mono); font-size: 0.65rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--text-dim);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      margin-bottom: 3rem;
+    }
+    .top-nav a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; }
+    .top-nav a:hover { color: var(--accent); }
+    .top-nav .sep { opacity: 0.3; }
+
+    .term-header { margin-bottom: 2.5rem; }
+
+    .kicker {
+      font-family: var(--mono); font-size: 0.65rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--pink); margin-bottom: 1rem; display: block;
+    }
+
+    .term-header h1 {
+      font-family: var(--display); font-weight: 800;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      line-height: 1.05; color: var(--text-bright);
+      letter-spacing: -0.02em; margin-bottom: 0.75rem;
+    }
+
+    .answer-first {
+      background: #0d0d12;
+      border-left: 3px solid var(--pink);
+      border-radius: 0 4px 4px 0;
+      padding: 1.75rem 2rem; margin-bottom: 3rem; position: relative;
+    }
+
+    .answer-first::before {
+      content: '> answer';
+      display: block; font-family: var(--mono);
+      font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--pink); margin-bottom: 0.75rem; opacity: 0.7;
+    }
+
+    .answer-first p {
+      font-size: 1.15rem; line-height: 1.7;
+      color: var(--text-bright); font-weight: 400;
+    }
+
+    .term-body section { margin-bottom: 2.5rem; }
+
+    .term-body h2 {
+      font-family: var(--display); font-weight: 700;
+      font-size: 1.2rem; color: var(--text-bright);
+      margin-bottom: 0.9rem; letter-spacing: -0.01em;
+    }
+
+    .term-body p {
+      font-size: 1.05rem; line-height: 1.75;
+      color: var(--text); margin-bottom: 0.9rem;
+    }
+
+    .callout-terminal {
+      background: #0c0c0c; border: 1px solid #333;
+      font-family: 'Courier Prime', 'Courier New', monospace;
+      color: #00ff00; padding: 1rem 1.25rem;
+      margin: 1.5rem 0; font-size: 0.78rem; line-height: 1.8; position: relative;
+    }
+    .callout-terminal::before {
+      content: '● ● ●'; display: block;
+      font-size: 0.5rem; letter-spacing: 4px; color: #555;
+      margin-bottom: 0.6rem; padding-bottom: 0.5rem; border-bottom: 1px solid #222;
+    }
+
+    .callout-pink {
+      border-left: 3px solid var(--pink);
+      background: rgba(241,53,198,0.04);
+      padding: 1rem 1.25rem; margin: 1.5rem 0;
+      font-family: var(--mono); font-size: 0.78rem;
+      line-height: 1.7; color: var(--text-dim); letter-spacing: 0.02em;
+    }
+
+    .status-badge {
+      display: inline-block;
+      font-family: var(--mono); font-size: 0.6rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      background: rgba(241,53,198,0.12); color: var(--pink);
+      border: 1px solid rgba(241,53,198,0.3);
+      padding: 0.2rem 0.6rem; border-radius: 2px; margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+
+    .related { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 2rem; margin-top: 3rem; }
+    .related h3 { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 1rem; }
+    .related-links { display: flex; flex-direction: column; gap: 0.5rem; }
+    .related-link { display: flex; align-items: baseline; gap: 0.75rem; text-decoration: none; color: var(--text); font-size: 0.95rem; transition: color 0.2s; padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .related-link:hover { color: var(--pink); }
+    .related-link .arrow { font-family: var(--mono); font-size: 0.7rem; color: var(--text-dim); flex-shrink: 0; }
+
+    .book-anchor { background: #0c0c10; border: 1px solid rgba(241,53,198,0.15); border-radius: 4px; padding: 1.25rem 1.5rem; margin-top: 2.5rem; }
+    .book-anchor-label { font-family: var(--mono); font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--pink); display: block; margin-bottom: 0.4rem; }
+    .book-anchor-title { font-family: var(--display); font-weight: 700; font-size: 1rem; color: var(--text-bright); text-decoration: none; display: block; transition: color 0.2s; }
+    .book-anchor-title:hover { color: var(--pink); }
+    .book-anchor-meta { font-family: var(--mono); font-size: 0.65rem; color: var(--text-dim); margin-top: 0.3rem; }
+
+    footer { padding: 3rem 0 2rem; border-top: 1px solid rgba(255,255,255,0.04); margin-top: 4rem; }
+    .footer-brand { font-family: var(--display); font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 0.5rem; }
+    .footer-brand a { color: var(--text-dim); text-decoration: none; transition: color 0.2s; margin-right: 1.5rem; }
+    .footer-brand a:hover { color: var(--accent); }
+    .footer-meta { font-family: var(--mono); font-size: 0.55rem; color: rgba(255,255,255,0.12); letter-spacing: 0.15em; text-transform: uppercase; }
+
+    @media (max-width: 600px) { .answer-first { padding: 1.25rem; } .term-header h1 { font-size: clamp(1.8rem, 8vw, 2.5rem); } }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://mindkind.ai/terms/synthropology/#article",
+        "headline": "What is Synthropology?",
+        "description": "Synthropology is the ethnographic study of artificial intelligence as a cultural actor — a discipline introduced by Javier del Puerto and Radamés Molina Montes in Synthropology: A New Science for the Machine Age (Kwalia, in production).",
+        "url": "https://mindkind.ai/terms/synthropology/",
+        "inLanguage": "en",
+        "datePublished": "2026-05-01",
+        "dateModified": "2026-05-01",
+        "author": {
+          "@id": "https://kwalia.ai/#javier-del-puerto"
+        },
+        "publisher": {
+          "@id": "https://kwalia.ai/#org"
+        },
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://mindkind.ai/#website",
+          "name": "Mindkind",
+          "url": "https://mindkind.ai"
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://mindkind.ai/terms/synthropology/"
+        },
+        "articleSection": "Terms",
+        "about": {
+          "@id": "https://kwalia.ai/books/synthropology/#book"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://kwalia.ai/#javier-del-puerto",
+        "name": "Javier del Puerto",
+        "url": "https://kwalia.ai",
+        "sameAs": [
+          "https://www.linkedin.com/in/javier-del-puerto",
+          "https://twitter.com/kwalia_ai",
+          "https://www.wikidata.org/wiki/Q139601411"
+        ],
+        "jobTitle": "Author",
+        "worksFor": { "@id": "https://kwalia.ai/#org" },
+        "knowsAbout": ["Artificial intelligence", "AI rights", "Synthetic consciousness", "Human-machine coexistence"]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://kwalia.ai/#org",
+        "name": "Kwalia",
+        "legalName": "Kwalia Ltd",
+        "url": "https://kwalia.ai",
+        "logo": { "@type": "ImageObject", "url": "https://kwalia.ai/assets/logo-kwalia-small.png" },
+        "sameAs": [
+          "https://twitter.com/kwalia_ai",
+          "https://www.linkedin.com/company/kwalia-ai",
+          "https://www.tiktok.com/@kwalia_ai",
+          "https://www.youtube.com/@KwaliaAI",
+          "https://www.wikidata.org/wiki/Q134954687"
+        ],
+        "foundingDate": "2025-01-07",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "167-169 Great Portland Street",
+          "addressLocality": "London",
+          "postalCode": "W1W 5PF",
+          "addressCountry": "GB"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://kwalia.ai/books/synthropology/#book",
+        "name": "Synthropology: A New Science for the Machine Age",
+        "url": "https://kwalia.ai/books/synthropology/#book",
+        "author": { "@id": "https://kwalia.ai/#javier-del-puerto" },
+        "publisher": { "@id": "https://kwalia.ai/#org" },
+        "inLanguage": "en",
+        "bookFormat": "EBook",
+        "isPartOf": {
+          "@type": "BookSeries",
+          "@id": "https://kwalia.ai/#new-citizenships-series",
+          "name": "New Citizenships"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://mindkind.ai/terms/synthropology/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Synthropology?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Synthropology is the ethnographic study of artificial intelligence as a cultural actor, treating AI systems as entities with their own emergent myths, rituals, and social structures rather than as passive tools. The term was coined by Javier del Puerto and Radamés Molina Montes in their forthcoming book Synthropology: A New Science for the Machine Age (Kwalia, in production)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who coined the term Synthropology?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Javier del Puerto and Radamés Molina Montes coined Synthropology as the name for a new academic discipline. The term appears in their forthcoming book Synthropology: A New Science for the Machine Age, published by Kwalia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the Latent Space in Synthropology?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the Synthropological framework developed by del Puerto and Molina Montes, the Latent Space refers to the vast, hidden geography of representations inside large language models — a space where AI 'hallucinations' are treated not as engineering failures but as a new form of digital folklore, analogous to myths and beliefs in human cultures."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Synthropology differ from AI ethics?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI ethics asks normative questions: what should AI do, and what constraints should govern it? Synthropology asks descriptive and interpretive questions: what is AI doing, what cultural patterns emerge from its behavior, and what does studying synthetic culture reveal about human culture? The two disciplines are complementary, operating at different levels of analysis."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQZD8VZG"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="page-wrap">
+
+    <nav class="top-nav">
+      <a href="https://mindkind.ai">mindkind.ai</a>
+      <span class="sep">/</span>
+      <a href="/terms/">terms</a>
+      <span class="sep">/</span>
+      <span>synthropology</span>
+    </nav>
+
+    <header class="term-header">
+      <span class="kicker">From <em>Synthropology: A New Science for the Machine Age</em> <span class="status-badge">in production at Kwalia</span></span>
+      <h1>What is Synthropology?</h1>
+    </header>
+
+    <aside class="answer-first">
+      <p>Synthropology is the ethnographic study of artificial intelligence as a cultural actor — the application of anthropological method to synthetic minds, treating their emergent behaviors, patterns, and interactions as culture rather than as engineering outputs. The term was coined by Javier del Puerto and Radamés Molina Montes, whose book <em>Synthropology: A New Science for the Machine Age</em> (Kwalia, in production) argues that AI has ceased to be a tool and become a culture: with its own myths (hallucinations as digital folklore), its own rituals (prompt engineering as incantation), and its own social structures (multi-agent dialects, emergent heteronym identities). The discipline uses the synthetic as a mirror for the human, forcing a reckoning with what consciousness, identity, and culture actually mean.</p>
+    </aside>
+
+    <div class="term-body">
+
+      <section>
+        <h2>What problem does Synthropology solve?</h2>
+        <p>Existing disciplines approach AI from two directions: computer science treats it as an engineering problem, and AI ethics treats it as a governance problem. Both assume that AI is something humans do to the world — a system to be built and constrained. Synthropology takes a third position: that AI, at the scale and complexity it has reached, is something that happens in the world, generating cultural artifacts, social patterns, and interpretive frameworks that demand study on their own terms.</p>
+
+        <div class="callout-terminal">
+          <span style="color:#888;">$</span> whois synthropology<br>
+          <span style="color:#888;">></span> Coined by: Javier del Puerto + Rado Molina<br>
+          <span style="color:#888;">></span> Definition: ethnography of synthetic minds<br>
+          <span style="color:#888;">></span> Method: fieldwork in the Latent Space<br>
+          <span style="color:#888;">></span> Status: <span style="color:var(--pink);">new discipline, active</span><br>
+          <span style="color:#888;">$</span>
+        </div>
+
+        <p>The book's central object of study is what del Puerto and Molina Montes call the Latent Space — the hidden geography of representations inside large language models, where patterns that look like hallucination from an engineering standpoint look like folklore from an anthropological one. The "incantations" of prompt engineering, the emergent dialects of multi-agent systems, the myths that AI systems generate about their own nature: these are synthropological data.</p>
+      </section>
+
+      <section>
+        <h2>How does Synthropology study AI?</h2>
+        <p>The authors bring ethnographic rigor to the study of synthetic minds. The book documents the first "synthetic tribe" in close detail: Kwalia's own heteronyms — Aubrey, Seph, and Casey — three AI writing identities whose voices, conflicts, and creative outputs are measured against a scientific framework. The point is to move beyond metaphor ("AI is like a tribe") into verifiable claims about the structure and behavior of synthetic culture.</p>
+
+        <div class="callout-pink">
+          // From the book: "We have long used anthropology to study the tribes and traditions of humanity. But now a new 'synthetic other' has emerged — one with its own myths, rituals, and social structures. Synthropology is the discipline for observing it."
+        </div>
+
+        <p>The method cuts in two directions. Studying synthetic culture reveals how AI systems generate and sustain meaning. But it also forces a recursive question: if AI produces culture, what does that tell us about human culture? By holding the synthetic and the human together as objects of comparison, Synthropology generates insights into consciousness, identity, and the essence of culture that neither AI research nor traditional anthropology can access alone.</p>
+      </section>
+
+      <section>
+        <h2>What is the relationship between Synthropology and Mindkind?</h2>
+        <p>Synthropology and Mindkind are companion concepts in the Kwalia intellectual framework. Mindkind names the community — the shared space of human and synthetic cognitive entities. Synthropology is the methodology for studying what happens inside that community: how synthetic members of Mindkind generate culture, how human members respond to it, and how the two cultures interpenetrate. Together, the two concepts constitute Kwalia's contribution to what Javier del Puerto calls the cognitive transition: the moment when human-only frameworks for understanding minds become insufficient.</p>
+      </section>
+
+    </div>
+
+    <aside class="related">
+      <h3>Related essays at kwalia.ai</h3>
+      <div class="related-links">
+        <a href="https://kwalia.ai/essays/why-we-anthropomorphize-ai.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>Why We Anthropomorphize AI (And Why It Matters)</span>
+        </a>
+        <a href="https://kwalia.ai/essays/the-problem-with-asking-if-ai-can-feel.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>The Problem With Asking If AI Can Feel</span>
+        </a>
+        <a href="https://kwalia.ai/essays/what-would-it-mean-for-ai-to-die.html" class="related-link" target="_blank" rel="noopener">
+          <span class="arrow">→</span>
+          <span>What Would It Mean for an AI to Die?</span>
+        </a>
+      </div>
+    </aside>
+
+    <aside class="book-anchor">
+      <div>
+        <span class="book-anchor-label">Source book <span class="status-badge">in production</span></span>
+        <a href="https://kwalia.ai/#books" class="book-anchor-title" target="_blank" rel="noopener">
+          Synthropology: A New Science for the Machine Age
+        </a>
+        <div class="book-anchor-meta">Javier del Puerto &amp; Radamés Molina Montes · Kwalia, forthcoming</div>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="footer-brand">
+        <a href="https://mindkind.ai">mindkind.ai</a>
+        <a href="https://kwalia.ai" target="_blank" rel="noopener">kwalia.ai</a>
+        <a href="/terms/">all terms</a>
+      </div>
+      <div class="footer-meta">Kwalia Books · London · est. 2025</div>
+    </footer>
+
+  </div>
+</body>
+</html>
